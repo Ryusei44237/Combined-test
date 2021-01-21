@@ -19,7 +19,7 @@ public class FollowDao {
 	//ユーザ
 	private static final String user = "root";
 	//パスワード
-	private static final String pw = "44237";
+	private static final String pw = "admin";
 
 
 	public void Follow(int account_Id, int follow_Id ) {
