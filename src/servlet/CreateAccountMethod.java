@@ -63,7 +63,7 @@ public class CreateAccountMethod extends HttpServlet {
 		//画像取得機能
 		String userimg = util.Getimg.getFileName(part);
 
-		part.write("C:\\\\workspace\\\\sotuken\\\\WebContent\\\\user-img\\\\" + userimg);
+		part.write("C:\\\\workspace\\\\Combined-test\\\\WebContent\\\\user-img\\\\" + userimg);
 		//daoへ送る
 		account s = new account(id,name,mail,password,birthday,tell,token,create_at,update_at,userimg);
 		account result = dao.AccountDao.inserAccount(s);
