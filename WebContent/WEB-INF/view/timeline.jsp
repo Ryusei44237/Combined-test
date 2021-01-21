@@ -1,11 +1,14 @@
+<%@page import="Bean.account"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="Bean.post" %>
 <!DOCTYPE html>
 <html lang="ja" class="no-js">
     <head>
     <!-- 確認 -->
         <meta charset="UTF-8">
-        <meta name=" viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/timeline.css">
         <title>Registration</title>
@@ -310,97 +313,27 @@
     <!-- ▼タイムラインエリア scrollを外すと高さ固定解除 -->
     <div class="twitter__contents scroll">
     <!-- ここに吹き出しやスタンプのタグを追加していく -->
+    <%
+				ArrayList<post> list = (ArrayList<post>)request.getAttribute("list");
+				for(int i = 0 ; i < list.size() ; i++){
+					post post = list.get(i);
+				%>
     <!-- 記事エリア -->
       <div class="twitter__block">
         <figure>
           <img src="icon.png" />
         </figure>
         <div class="twitter__block-text">
-          <div class="name">中村<span class="name_reply">@usa_tan</span></div>
-          <div class="date">10分前</div>
+        <div hidden><%=post.getId() %>></div>
+          <div class="name"><%=post.getAccount_name() %><span class="name_reply">@<%=post.getId() %></span></div>
+          <div class="date"><%=post.getCreate_At() %></div>
           <div class="text">
-            今日も終電だよ～<br>
+            <%=post.getContents() %><br><img src=<%=post.getImg()%> alt=<%=post.getTags_Id()%><%=post.getAddress()%>>
           </div>
+
         </div>
       </div>
-
-      <!-- 記事エリア -->
-      <div class="twitter__block">
-        <figure>
-          <img src="icon.png" />
-        </figure>
-        <div class="twitter__block-text">
-          <div class="name">あ<span class="name_reply">@abcde</span></div>
-          <div class="date">1時間前</div>
-          <div class="text">
-            残業でお腹空いたから朝までやってるお店でラーメン食べることにした(^o^)神の食べ物すぎる・・うまぁ
-            <div class="in-pict">
-              <img src="sample.jpg">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 記事エリア -->
-      <div class="twitter__block">
-        <figure>
-          <img src="icon.png" />
-        </figure>
-        <div class="twitter__block-text">
-          <div class="name">い<span class="name_reply">@usa_tan</span></div>
-          <div class="date">2018/06/24 5:34</div>
-          <div class="text">
-            睡眠２時間で出社なんだけど…
-            <a href="https://nakox.jp/">https://nakox.jp/</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="twitter__block">
-        <figure>
-          <img src="icon.png" />
-        </figure>
-        <div class="twitter__block-text">
-          <div class="name">大沼<span class="name_reply">@usa_tan</span></div>
-          <div class="date">10分前</div>
-          <div class="text">
-            今日も終電だよ～<br>
-          </div>
-        </div>
-      </div>
-
-      <!-- 記事エリア -->
-      <div class="twitter__block">
-        <figure>
-          <img src="icon.png" />
-        </figure>
-        <div class="twitter__block-text">
-          <div class="name">ヨロズツバサ<span class="name_reply">@abcde</span></div>
-          <div class="date">1時間前</div>
-          <div class="text">
-            残業でお腹空いたから朝までやってるお店でラーメン食べることにした(^o^)神の食べ物すぎる・・うまぁ
-            <div class="in-pict">
-              <img src="sample.jpg">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 記事エリア -->
-      <div class="twitter__block">
-        <figure>
-          <img src="icon.png" />
-        </figure>
-        <div class="twitter__block-text">
-          <div class="name">萬<span class="name_reply">@usa_tan</span></div>
-          <div class="date">2018/06/24 5:34</div>
-          <div class="text">
-            睡眠２時間で出社なんだけど…
-            <a href="https://nakox.jp/">https://nakox.jp/</a>
-          </div>
-        </div>
-      </div>
-
+<%} %>
     </div>
     <!--　▲タイムラインエリア ここまで -->
   </div>
