@@ -27,10 +27,10 @@
 		</a>
 			<ul class="navbar-nav">
 				<li class="nav-item active"><a class="nav-link disabled"
-					href="/sotuken-project/TestServlet"><h5>ログイン</h5><span class="sr-only">(current)</span></a>
+					><h5>ログイン</h5><span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item active"><a class="nav-link"
-					href="test.html"><h5>登録</h5></a></li>
+					href="singnup.jsp"><h5>登録</h5></a></li>
 			</ul>
 		<div id="h_item3" style="margin-left: 13%;">
                 <div id="title">
@@ -45,7 +45,7 @@
 	<div class="form-wrapper">
 		<h1>ログイン</h1>
 		<!--ここのフォームから、MainServletへ値を送信する-->
-		<form action="/sotuken-project/MainServlet" method="post">
+		<form action="Combined-test/MainServlet" method="post">
 			<div class="form-item">
 				<label for="name"></label> <input type="text" name="name"
 					required="required" placeholder="ユーザ名"></input>
@@ -65,7 +65,7 @@
 				<a href="signup.jsp">アカウントを作成</a>
 			</p>
 			<p>
-				<a href="forgot.jsp">パスワードを忘れた場合</a>
+				<a href="forgotpass.jsp">パスワードを忘れた場合</a>
 			</p>
 		</div>
 	</div>
