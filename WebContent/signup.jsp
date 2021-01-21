@@ -36,7 +36,7 @@
 	</nav>
 </header>
 <body>
-	<form action="/Combined-test/SignUpServlet" method="post" >
+	<form action="/Combined-test/CreateAccountMethod" method="post" >
 		<h2>新規アカウント登録</h2>
 		<p>無料でご利用いただけます。</p>
 		<div class="form-group col-md-12">
