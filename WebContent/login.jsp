@@ -30,7 +30,7 @@
 					><h5>ログイン</h5><span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item active"><a class="nav-link"
-					href="singnup.jsp"><h5>登録</h5></a></li>
+					href="/Combined-test/signup.jsp"><h5>登録</h5></a></li>
 			</ul>
 		<div id="h_item3" style="margin-left: 13%;">
                 <div id="title">
