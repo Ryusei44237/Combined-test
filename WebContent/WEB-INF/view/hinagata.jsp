@@ -14,47 +14,50 @@
 </head>
 <body>
     <div id="modal">
-       <!-- 投稿ボタンを押下した際に出てくる投稿モーダル -->
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">投稿エリア</h5>
-                <button type="button" class="close" data-dismiss="modal"
-                    aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form id="postform" action="/sotuken-project/PostServlet" method="post">
-                    <class class="form-group">
-                        <label for="exampleInputEmail1">投稿文</label>
-                        <input type="text"class="form-control" id = "testname" name="PostContents" aria-describedby="emailHelp"placeholder="投稿文を入力">
-                        <input type="hidden"name="accountid" value=<%=request.getAttribute("accountid")%>>
-                        <input type="file" name="uploadFile" id="uploadFile">
-                    </class>
-                            <div class="form-group col-md-4">
-                                 <select id="inputState"
-                                    class="form-control" name="PostTags">
-                                    <option selected>タグ選択</option>
-                                    <option value="1">台風</option>
-                                    <option value="2">地震</option>
-                                    <option value="3">津波</option>
-                                    <option value="4">洪水</option>
-                                </select>
-                            </div>
-                            <input type="hidden" name="value" value="post">
-                        <button type="submit" class="btn btn-primary" id="submit">投稿</button>
-                    </div>
-                    </form>
-            </div>
-        </div>
-    </div>
-    </div>
-    <!-- bodyの中をヘッダー、レフトメニュー、ライトメニュー、メイン、フッターの５要素に分割する -->
-    <section class="header">
-        <div class="header_items">
+       	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">投稿エリア</h5>
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body">
+							<form id="postform" action="/Combined-test/PostServlet" method="POST"
+								enctype="multipart/form-data">
+								<class class="form-group"> <label
+									for="exampleInputEmail1">投稿文</label> <input type="text"
+									class="form-control" id="testname" name="PostContents"
+									placeholder="投稿文を入力"> <input type="hidden"
+									name="accountid" value=<%=request.getAttribute("accountid")%>>
+								<input type="text" name="accountname"
+									value=<%=request.getAttribute("getname")%>> <input
+									type="file" name="uploadFile" id="uploadFile" value="null">
+								</class>
+								<div class="form-group col-md-4">
+									<select id="inputState" class="form-control" name="PostTags">
+										<option selected>タグ選択</option>
+										<option value="1">台風</option>
+										<option value="2">地震</option>
+										<option value="3">津波</option>
+										<option value="4">洪水</option>
+									</select>
+								</div>
+								<input type="hidden" name="value" value="post">
+								<button type="submit" class="btn btn-primary" id="submit">投稿</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- bodyの中をヘッダー、レフトメニュー、ライトメニュー、メイン、フッターの５要素に分割する -->
+<section class="header">
+	<div class="header_items">
             <!-- ロゴ -->
             <div id="h_item1">
                 <div id="logo">
@@ -63,12 +66,21 @@
             </div>
             <!-- 画面遷移 -->
             <div id="h_item2">
-                <div id="form_group">
-                    <form action="/sotuken-project/tourokuServlet" method="get"><button type="submit" class="clear-decoration">登録</button></form>
-                    <form action="/sotuken-project/TestServlet" method="get"><button type="submit" class="clear-decoration">ログイン</button></form>
-                    <form action="/sotuken-project/MyPageServlet" method="get"><input type="hidden" name="account_id" value=<%=request.getAttribute("accountid")%>><button type="submit" class="clear-decoration" name="name" value=<%=request.getAttribute("getname") %>>マイページ</button></form>
-                </div>
-            </div>
+				<div id="form_group">
+					<form action="/Combined-test/SignUp" method="get">
+						<button type="submit" class="clear-decoration">登録</button>
+					</form>
+					<form action="/Combined-test/MainServlet" method="get">
+						<button type="submit" class="clear-decoration">ログイン</button>
+					</form>
+					<form action="/Combined-test/MyPageServlet" method="get">
+						<input type="hidden" name="account_id"
+							value=<%=request.getAttribute("accountid")%>>
+						<button type="submit" class="clear-decoration" name="name"
+							value=<%=request.getAttribute("getname") %>>マイページ</button>
+					</form>
+				</div>
+			</div>
             <!-- タイトル -->
             <div id="h_item3">
                 <div id="title">
@@ -77,20 +89,29 @@
             </div>
             <!-- 検索バー -->
             <div id="h_item4">
-                <div id="searchform">
-                    <form class="form-inline my-2 my-lg-0" style="width: 20vw; display: flex;" action="/sotuken-project/PostSearch"method="get">
-                        <input class="form-control mr-sm-2" type="text" name="Search"placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                </div>
-                 <!-- 投稿ボタン -->
-                 <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary" id="post_button">投稿</button>
-                <!-- 設定ボタン -->
-                <div id="setting">
-                    <button type="button" class="btn btn-primary" data-toggle="modal"data-target=".bd-example-modal-sm"><i class="fas fa-cog"></i></button>
-                </div>
-            </div>
-        </div>
+				<div id="searchform">
+					<form class="form-inline my-2 my-lg-0"
+						style="width: 20vw; display: flex;" action="/Combined-test/PostSearch"
+						method="post">
+						<input class="form-control mr-sm-2" type="text" name="Search"
+							placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0"
+							type="submit">Search</button>
+					</form>
+				</div>
+			<!-- 投稿ボタン -->
+			<button type="button" data-toggle="modal"
+				data-target="#exampleModal" class="btn btn-primary"
+				id="post_button">投稿</button>
+			<!-- 設定ボタン -->
+			<div id="setting">
+				<button type="button" class="btn btn-primary" data-toggle="modal"
+						data-target=".bd-example-modal-sm">
+				<i class="fas fa-cog"></i>
+				</button>
+			</div>
+		</div>
+    </div>
     </section>
     <div class="container_body">
 
