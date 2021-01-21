@@ -23,7 +23,7 @@
 		</a>
 			<ul class="navbar-nav">
 				<li class="nav-item active"><a class="nav-link"
-					href="/sotuken-project/TestServlet"><h5>ログイン</h5><span class="sr-only">(current) </span></a>
+					href="/Combined-test/login.jsp"><h5>ログイン</h5><span class="sr-only">(current) </span></a>
 				</li>
 				<li class="nav-item active"><a class="nav-link disabled"
 					href="test.html"><h5>登録</h5></a></li>
@@ -36,7 +36,7 @@
 	</nav>
 </header>
 <body>
-	<form action="/sotuken-project/SignInServlet" method="post" >
+	<form action="/Combined-test/SignInServlet" method="post" >
 		<h2>新規アカウント登録</h2>
 		<p>無料でご利用いただけます。</p>
 		<div class="form-group col-md-12">
@@ -116,9 +116,9 @@
 		</div>
 		<div class="form-group col-md-12">
 			<label for="exampleInputPassword1">パスワード</label>
-				<input type="password" class="form-control" id="exampleInputPassword2"
+				<input type="password" class="form-control" id="exampleInputPassword2" name="password"
 				placeholder="パスワードの入力...">
-				<input type="password" class="form-control" id="exampleInputPassword3"
+				<input type="password" class="form-control" id="exampleInputPassword3" name="password2"
 				placeholder="パスワードの再入力...">
 		</div>
 		<div class="form-group col-md-12">
