@@ -182,7 +182,6 @@
 										type="submit" class="btn btn-primary stretched-link"
 										value="タイムラインへgo">
 								</form>
-								<a href="#" class="btn btn-primary stretched-link">タイムラインへGo</a>
 							</div>
 						</div>
 						<div class="card">
@@ -196,7 +195,6 @@
 										type="submit" class="btn btn-primary stretched-link"
 										value="タイムラインへgo">
 								</form>
-								<a href="#" class="btn btn-primary stretched-link">タイムラインへGo</a>
 							</div>
 						</div>
 					</div>
@@ -223,7 +221,11 @@
 							<div class="card-body">
 								<h5 class="card-title">熊本地震</h5>
 								<p class="card-text">大きな揺れが人々を襲った</p>
-								<a href="#" class="btn btn-primary stretched-link">タイムラインへGo</a>
+								<form action="/Combined-test/TimelineServlet" method="get">
+									<input type="hidden" value="地震" name="tag"> <input
+										type="submit" class="btn btn-primary stretched-link"
+										value="タイムラインへgo">
+								</form>
 							</div>
 						</div>
 						<div class="card">
@@ -232,7 +234,11 @@
 							<div class="card-body">
 								<h5 class="card-title">台風</h5>
 								<p class="card-text">太平洋側の地域に大きな被害をもたらした。</p>
-								<a href="#" class="btn btn-primary stretched-link">タイムラインへGo</a>
+								<form action="/Combined-test/TimelineServlet" method="get">
+									<input type="hidden" value="台風" name="tag"> <input
+										type="submit" class="btn btn-primary stretched-link"
+										value="タイムラインへgo">
+								</form>
 							</div>
 						</div>
 					</div>
