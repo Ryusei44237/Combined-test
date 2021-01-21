@@ -36,7 +36,7 @@
 	</nav>
 </header>
 <body>
-	<form action="/Combined-test/CreateAccountMethod" method="post" >
+	<form action="/Combined-test/CreateAccountMethod" method="post" enctype="multipart/form-data">
 		<h2>新規アカウント登録</h2>
 		<p>無料でご利用いただけます。</p>
 		<div class="form-group col-md-12">
@@ -127,6 +127,7 @@
 		</div>
 		<input type="hidden" name="token" value="sessions">
 		<div class="form-group">
+		<input type="file" name="userimg" id="uploadFile">
 			<input type="submit" class="btn btn-primary"
 				style="margin-bottom: 5px;" value="アカウント登録">
 		</div>
