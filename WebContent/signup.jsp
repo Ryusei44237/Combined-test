@@ -23,7 +23,7 @@
 		</a>
 			<ul class="navbar-nav">
 				<li class="nav-item active"><a class="nav-link"
-					href="/sotuken-project/TestServlet"><h5>ログイン</h5><span class="sr-only">(current)</span></a>
+					href="/sotuken-project/TestServlet"><h5>ログイン</h5><span class="sr-only">(current) </span></a>
 				</li>
 				<li class="nav-item active"><a class="nav-link disabled"
 					href="test.html"><h5>登録</h5></a></li>
