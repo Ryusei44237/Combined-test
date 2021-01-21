@@ -44,7 +44,7 @@
 	<div class="form-wrapper">
 		<h1>ログイン</h1>
 		<!--ここのフォームから、MainServletへ値を送信する-->
-<form action="/sotuken/MainServlet" method="post">
+<form action="/Combined-test/MainServlet" method="post">
 			<div class="form-item">
 				<label for="name"></label> <input type="text" name="name"
 					required="required" placeholder="ユーザ名"></input>
