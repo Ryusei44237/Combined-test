@@ -26,35 +26,31 @@
 						</button>
 					</div>
 					<div class="modal-body">
-						<div class="modal-body">
-							<form id="postform" action="/Combined-test/PostServlet" method="POST"
-								enctype="multipart/form-data">
-								<class class="form-group"> <label
-									for="exampleInputEmail1">投稿文</label> <input type="text"
-									class="form-control" id="testname" name="PostContents"
-									placeholder="投稿文を入力"> <input type="hidden"
-									name="accountid" value=<%=request.getAttribute("accountid")%>>
-								<input type="text" name="accountname"
-									value=<%=request.getAttribute("getname")%>> <input
-									type="file" name="uploadFile" id="uploadFile" value="null">
-								</class>
-								<div class="form-group col-md-4">
-									<select id="inputState" class="form-control" name="PostTags">
-										<option selected>タグ選択</option>
-										<option value="1">台風</option>
-										<option value="2">地震</option>
-										<option value="3">津波</option>
-										<option value="4">洪水</option>
-									</select>
-								</div>
-								<input type="hidden" name="value" value="post">
-								<button type="submit" class="btn btn-primary" id="submit">投稿</button>
-							</form>
-						</div>
+						<form id="postform" action="/Combined-test/PostServlet" method="POST" enctype="multipart/form-data">
+							<class class="form-group">
+								<label	for="exampleInputEmail1">投稿文</label>
+								<input type="text"	class="form-control" id="testname" name="PostContents" placeholder="投稿文を入力">
+								<input type="hidden" name="accountid" value=<%=request.getAttribute("accountid")%>>
+								<input type="hidden" name="accountname" value=<%=request.getAttribute("getname")%>>
+								<input type="file" name="uploadFile" id="uploadFile" value="null">
+							</class>
+							<div class="form-group col-md-4">
+								<select id="inputState" class="form-control" name="PostTags">
+									<option selected>タグ選択</option>
+									<option value="1">台風</option>
+									<option value="2">地震</option>
+									<option value="3">津波</option>
+									<option value="4">洪水</option>
+								</select>
+							</div>
+							<input type="hidden" name="value" value="post">
+							<button type="submit" class="btn btn-primary" id="submit">投稿</button>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 <!-- bodyの中をヘッダー、レフトメニュー、ライトメニュー、メイン、フッターの５要素に分割する -->
 <section class="header">
 	<div class="header_items">
@@ -67,10 +63,10 @@
             <!-- 画面遷移 -->
             <div id="h_item2">
 				<div id="form_group">
-					<form action="/Combined-test/SignUp" method="get">
+					<form action="/Combined-test/signup.jsp" method="get">
 						<button type="submit" class="clear-decoration">登録</button>
 					</form>
-					<form action="/Combined-test/MainServlet" method="get">
+					<form action="/Combined-test/login.jsp" method="get">
 						<button type="submit" class="clear-decoration">ログイン</button>
 					</form>
 					<form action="/Combined-test/MyPageServlet" method="get">

@@ -265,7 +265,7 @@ iframe{
     transform:translate(-50%,-50%);
   }
   /* モーダル内部 */
-  #inputFile {
+  /* #inputFile {
     position: relative;
     padding: 180px 0 100px;
     text-align: center;
@@ -340,3 +340,4 @@ iframe{
 #upFileWrap.selected #btnChangeFile {
     display: table;
 }
+ */
