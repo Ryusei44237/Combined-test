@@ -28,7 +28,7 @@
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav">
 				<li class="nav-item active"><a class="nav-link"
-					href="/sotuken-project/TestServlet">ログイン<span class="sr-only">(current)</span></a>
+					href="/Conbined-test/TestServlet">ログイン<span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item active"><a class="nav-link disabled"
 					href="test.html">登録</a></li>
@@ -37,7 +37,7 @@
 	</nav>
 </header>
 <body>
-	<form action="/sotuken/CreateAccountMethod" method="post" method="POST" enctype="multipart/form-data">
+	<form action="/Combined-test/CreateAccountMethod" method="post" method="POST" enctype="multipart/form-data">
 		<h2>新規アカウント登録</h2>
 		<p>無料でご利用いただけます。</p>
 		<div class="form-group col-md-12">
