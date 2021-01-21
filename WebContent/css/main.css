@@ -1,0 +1,114 @@
+body{
+  z-index: 1;
+  margin-top: 50px;
+}
+
+#modal{
+    position: relative;
+    z-index: 9998;
+    display: block;
+}
+
+header{
+  position: fixed;            /* ヘッダーの固定 */
+  top: 0px;                   /* 位置(上0px) */
+  left: 0px;                  /* 位置(右0px) */
+  width: 100%;                /* 横幅100%　*/
+  height: 140px;
+  z-index: 2;
+}
+.card-deck {
+  padding: 0 100px 0 100px;
+}
+.carousel-inner{
+  margin-top: 56px;
+  background-color: gray;
+  text-align: center;
+  z-index: 1;
+}.clear-decoration {
+    border: none;  /* 枠線を消す */
+    outline: none; /* クリックしたときに表示される枠線を消す */
+    background: transparent; /* 背景の灰色を消す */
+}
+.modal.fade{
+
+z-index:9998;
+}
+
+
+
+#inputFile {
+    position: relative;
+    padding: 180px 0 100px;
+    text-align: center;
+}
+
+#dropArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 100px 0 0;
+    border: 2px dashed #494949;
+    background: rgba(22, 165, 191, 0);
+    transition: all 0.25s cubic-bezier(0.21, 0.51, 0.51, 1);
+}
+
+#dropArea.dragover {
+    border: 2px solid #16a5bf;
+    background: rgba(22, 165, 191, 0.6);
+}
+
+#uploadFile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: block;
+    width: 300px;
+    height: 80px;
+    opacity: 0;
+}
+
+#inputFileWrap {
+    position: relative;
+    display: inline-block;
+}
+
+#btnInputFile,
+#btnChangeFile {
+    display: table;
+    width: 300px;
+}
+
+#btnChangeFile {
+    display: none;
+}
+
+
+#btnInputFile span,
+#btnChangeFile span {
+    position: relative;
+    z-index: 2;
+    display: table-cell;
+    width: 300px;
+    height: 80px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: #333;
+    text-decoration: none;
+    color: #fff;
+    font-size: 26px;
+    line-height: 1;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+#upFileWrap.selected #btnInputFile {
+    display: none;
+}
+
+#upFileWrap.selected #btnChangeFile {
+    display: table;
+}

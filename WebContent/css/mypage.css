@@ -1,0 +1,167 @@
+body{
+	z-index: 1;
+  }
+  header{
+	position: fixed;            /* ヘッダーの固定 */
+	top: 0px;                   /* 位置(上0px) */
+	left: 0px;                  /* 位置(右0px) */
+	width: 100%;                /* 横幅100%　*/
+	height: 140px;
+	z-index: 2;
+  }
+
+  .modal.fade.bd-example-modal-sm{
+	z-index:9998;
+  }
+  .home-page{
+	  margin-top: 60px;
+  }
+  .nav-tabs {
+	border-bottom:none;
+  }
+  .blue{
+  	background-color: #5ea5ff;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all  0.3s ease;
+	color: #ffffff;
+ }
+.blue:hover {
+background-color :#007bff;
+color: #ffffff;
+}
+  .nav-tabs .nav-link.active.blue {
+    color: #ffffff;
+    background-color: #9eceff;
+    border-bottom: #e2e2e2;
+    font-weight: bold;
+}
+    .tab-pane.active .tab-pane-header {
+	padding:2rem;
+	background-color:#e2e2e2;
+	border-top-right-radius: .5rem;
+	border-top-left-radius: .5rem;
+	margin-bottom:1rem;
+  }
+    .tab-pane:first-child .tab-pane-header {
+	border-top-left-radius: 0;
+  }
+  .username{
+	  margin: 10px 0px 20px 20px;
+  }
+  .bg-white{
+	  margin-bottom: 15px;
+	  margin-left: 20px;
+  }
+  .insta {
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+}
+.insta > div {
+	position: relative;
+	width: 31%;
+	height: auto;
+	margin: 1%;
+	overflow: hidden;
+}
+.insta > div:before {
+	content: "";
+	display: block;
+	padding-top: 100%;
+}
+.insta > div > a {
+	position: absolute;
+	display: block;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
+}
+.insta > div > a img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: auto;
+	height: 100%;
+}
+.insta > div > a > span {/*classがfaのアイコンに対して*/
+	position: absolute;
+	top: 10%;
+	right: -5%;
+	-ms-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	margin:0;/*余計な隙間を除く*/
+	padding:0;/*余計な隙間を除く*/
+	font-size: 12px;/*サイズ*/
+	color: rgba(255, 255, 255, 0.6);/*半透明*/
+}
+.insta > div > a > span i:nth-child(2) {
+	opacity: 0.55;
+	color: red;
+}
+.btn-social-square {
+	display: inline-block;
+	text-decoration: none;
+	width: 40px;
+	margin:2px;
+	height: 40px;
+	line-height: 50px;
+	font-size: 23px;
+	color:white;
+	border-radius: 12px;
+	text-align: center;
+	overflow: hidden;
+	font-weight: bold;
+	transition: .3s;
+  }
+  .btn-social-square i {
+	line-height:50px;
+  }
+  .btn-social-square:hover {
+	-webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
+  }
+  .btn-social-square--twitter {
+	background: #22b8ff;
+  }
+  .btn-social-square--facebook {
+	background: #6680d8;
+  }
+  .btn-social-square--hatebu {
+	background: #49a8fb;
+  }
+  .btn-social-square--pocket {
+	background: #ff6d82;
+  }
+  .btn-social-square--feedly {
+	background: #7bda72;
+  }
+  .acount-form{
+	  width: 600px;
+  }
+
+  form.needs-validation{
+  	border:1px solid;
+    border-color:#dee2e6;
+    background-color: #FFFFFF;
+    text-align: center;
+    position:relative;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    max-width: 900px;
+    max-height: 700px;
+    margin-top: 20px;
+  }
+
+  div.form-row{
+  	margin-left:120px;
+
+  }
