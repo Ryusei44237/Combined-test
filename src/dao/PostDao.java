@@ -18,7 +18,7 @@ public class PostDao {
 		//ユーザ
 		private static final String user = "root";
 		//パスワード
-		private static final String pw = "44237";
+		private static final String pw = "admin";
 
 		public static String account_id;
 		public static String contents;
