@@ -134,68 +134,88 @@
                 </div>
             </div>
             <!-- card -->
-            <div id="card">
-                <div class="card-deck">
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/app-image/東日本大震災.jpg" alt="" width="100%" height="200vh">
-                        <div class="card-body">
-                            <h5 class="card-title">東日本大震災</h5>
-                            <p class="card-text">とても大きな地震</p>
-                            <form action="/sotuken-project/TimelineServlet" method="get">
-                                <input type="hidden" value="東日本大震災" name="tag">
-                                <input type="submit" class="btn btn-primary stretched-link" value="タイムラインへgo">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/app-image/熊本地震.jpg" alt="" width="100%" height="200vh">
-                        <div class="card-body">
-                            <h5 class="card-title">熊本地震</h5>
-                            <p class="card-text">大きな揺れが人々を襲った</p>
-                            <a href="#" class="btn btn-primary stretched-link">タイムラインへGo</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/app-image/台風.jpg" alt="" width="100%" height="200vh">
-                        <div class="card-body">
-                            <h5 class="card-title">台風</h5>
-                            <p class="card-text">太平洋側の地域に大きな被害をもたらした。</p>
-                            <a href="#" class="btn btn-primary stretched-link">タイムラインへGo</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="card">
-                <div class="card-deck">
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/app-image/東日本大震災.jpg" alt="" width="100%" height="200vh">
-                        <div class="card-body">
-                            <h5 class="card-title">東日本大震災</h5>
-                            <p class="card-text">とても大きな地震</p>
-                            <form action="/sotuken-project/TimelineServlet" method="get">
-                                <input type="hidden" value="東日本大震災" name="tag">
-                                <input type="submit" class="btn btn-primary stretched-link" value="タイムラインへgo">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/app-image/熊本地震.jpg" alt="" width="100%" height="200vh">
-                        <div class="card-body">
-                            <h5 class="card-title">熊本地震</h5>
-                            <p class="card-text">大きな揺れが人々を襲った</p>
-                            <a href="#" class="btn btn-primary stretched-link">タイムラインへGo</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/app-image/台風.jpg" alt="" width="100%" height="200vh">
-                        <div class="card-body">
-                            <h5 class="card-title">台風</h5>
-                            <p class="card-text">太平洋側の地域に大きな被害をもたらした。</p>
-                            <a href="#" class="btn btn-primary stretched-link">タイムラインへGo</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+				<div id="card">
+					<div class="card-deck">
+						<div class="card">
+							<img
+								src="${pageContext.request.contextPath}/app-image/東日本大震災.jpg"
+								alt="" width="100%" height="200vh">
+							<div class="card-body">
+								<h5 class="card-title">台風</h5>
+								<p class="card-text">強い風</p>
+								<form action="/Combined-test/TimelineServlet" method="get">
+									<input type="hidden" value="台風" name="tag"> <input
+										type="submit" class="btn btn-primary stretched-link"
+										value="タイムラインへgo">
+								</form>
+							</div>
+						</div>
+						<div class="card">
+							<img src="${pageContext.request.contextPath}/app-image/熊本地震.jpg"
+								alt="" width="100%" height="200vh">
+							<div class="card-body">
+								<h5 class="card-title">東日本大震災</h5>
+								<p class="card-text">大きな揺れが人々を襲った</p>
+								<form action="/Combined-test/TimelineServlet" method="get">
+									<input type="hidden" value="東日本大震災" name="tag"> <input
+										type="submit" class="btn btn-primary stretched-link"
+										value="タイムラインへgo">
+								</form>
+								<a href="#" class="btn btn-primary stretched-link">タイムラインへGo</a>
+							</div>
+						</div>
+						<div class="card">
+							<img src="${pageContext.request.contextPath}/app-image/台風.jpg"
+								alt="" width="100%" height="200vh">
+							<div class="card-body">
+								<h5 class="card-title">つなみ</h5>
+								<p class="card-text">太平洋側の地域に大きな被害をもたらした。</p>
+								<form action="/Combined-test/TimelineServlet" method="get">
+									<input type="hidden" value="津波" name="tag"> <input
+										type="submit" class="btn btn-primary stretched-link"
+										value="タイムラインへgo">
+								</form>
+								<a href="#" class="btn btn-primary stretched-link">タイムラインへGo</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="card">
+					<div class="card-deck">
+						<div class="card">
+							<img
+								src="${pageContext.request.contextPath}/app-image/東日本大震災.jpg"
+								alt="" width="100%" height="200vh">
+							<div class="card-body">
+								<h5 class="card-title">洪水</h5>
+								<p class="card-text">大変だ！</p>
+								<form action="/Combined-test/TimelineServlet" method="get">
+									<input type="hidden" value="洪水" name="tag"> <input
+										type="submit" class="btn btn-primary stretched-link"
+										value="タイムラインへgo">
+								</form>
+							</div>
+						</div>
+						<div class="card">
+							<img src="${pageContext.request.contextPath}/app-image/熊本地震.jpg"
+								alt="" width="100%" height="200vh">
+							<div class="card-body">
+								<h5 class="card-title">熊本地震</h5>
+								<p class="card-text">大きな揺れが人々を襲った</p>
+								<a href="#" class="btn btn-primary stretched-link">タイムラインへGo</a>
+							</div>
+						</div>
+						<div class="card">
+							<img src="${pageContext.request.contextPath}/app-image/台風.jpg"
+								alt="" width="100%" height="200vh">
+							<div class="card-body">
+								<h5 class="card-title">台風</h5>
+								<p class="card-text">太平洋側の地域に大きな被害をもたらした。</p>
+								<a href="#" class="btn btn-primary stretched-link">タイムラインへGo</a>
+							</div>
+						</div>
+					</div>
+				</div>
         </sction>
         <!-- main area end -->
 
