@@ -13,31 +13,30 @@
 <title>Registration</title>
 </head>
 <header>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light " style="padding:0px 16px 0px 16px;">
 		<a class="nav-link disabled" href="../html/toppage.html">
-			<div class="aaa">
-				<img src="../image/空.jpg" width="30" height="30"
-					class="d-inline-block align-top" alt=""> 卒研ページ
-			</div>
+		<div id="h_item1">
+                <div id="logo">
+                    <img src="https://getbootstrap.jp/docs/4.5/assets/brand/bootstrap-solid.svg" alt="">
+                </div>
+        </div>
 		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarNav" aria-controls="navbarNav"
-			aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav">
 				<li class="nav-item active"><a class="nav-link"
-					href="/Conbined-test/TestServlet">ログイン<span class="sr-only">(current)</span></a>
+					href="/sotuken-project/TestServlet"><h5>ログイン</h5><span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item active"><a class="nav-link disabled"
-					href="test.html">登録</a></li>
+					href="test.html"><h5>登録</h5></a></li>
 			</ul>
-		</div>
+		<div id="h_item3" style="margin-left: 13%;">
+                <div id="title">
+                    <p id="title-text" style="margin:0 0 16px 0;">災害情報共有</p>
+                </div>
+            </div>
 	</nav>
 </header>
 <body>
-	<form action="/Combined-test/CreateAccountMethod" method="post" method="POST" enctype="multipart/form-data">
+	<form action="/sotuken-project/SignInServlet" method="post" >
 		<h2>新規アカウント登録</h2>
 		<p>無料でご利用いただけます。</p>
 		<div class="form-group col-md-12">
@@ -117,9 +116,9 @@
 		</div>
 		<div class="form-group col-md-12">
 			<label for="exampleInputPassword1">パスワード</label>
-				<input type="password" class="form-control" id="exampleInputPassword2" name="password"
+				<input type="password" class="form-control" id="exampleInputPassword2"
 				placeholder="パスワードの入力...">
-				<input type="password" class="form-control" id="exampleInputPassword3" name="password2"
+				<input type="password" class="form-control" id="exampleInputPassword3"
 				placeholder="パスワードの再入力...">
 		</div>
 		<div class="form-group col-md-12">
@@ -128,8 +127,6 @@
 		</div>
 		<input type="hidden" name="token" value="sessions">
 		<div class="form-group">
-		<p>ユーザピクチャ</p>
-		<input type="file" name="userimg" id="uploadFile">
 			<input type="submit" class="btn btn-primary"
 				style="margin-bottom: 5px;" value="アカウント登録">
 		</div>
