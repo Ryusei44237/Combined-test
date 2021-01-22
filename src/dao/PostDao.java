@@ -265,7 +265,9 @@ public class PostDao {
 						con = DriverManager.getConnection(url, user, pw);
 
 						//SQL文の元を作成する
-						String sql = "SELECT * FROM post where tags_id = ?;";
+						String sql = "SELECT account.id, account.name, account.userimg, contents, img, post.create_at FROM post"
+									+ "LEFT OUTER JOIN account ON account_id = account.id"
+									+ "WHERE tags_id = ?;";
 
 						//SQLを実行するための準備(構文解析)
 						pstmt = con.prepareStatement(sql);
