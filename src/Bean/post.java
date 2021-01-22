@@ -12,6 +12,8 @@ public class post {
 	private String address;
 	private String create_at;
 	private String account_name;
+	private String user_img;
+
 	public post(String id, String contents, String img, String tags_id, String account_id, String address, String create_at ) {
 
 		this.id = id;
@@ -21,6 +23,16 @@ public class post {
 		this.account_id = account_id;
 		this.address = address;
 		this.create_at = create_at;
+
+	}
+	public post(String id, String name, String user_img, String contents, String img,String create_at) {
+
+		this.id = id;
+		this.account_name=name;
+		this.setUser_img(user_img);
+		this.contents = contents;
+		this.img = img;
+		this.create_at=create_at;
 
 	}
 	public post(String id, String account_name,String contents, String img, String tags_id, String account_id, String address, String create_at ) {
@@ -35,16 +47,16 @@ public class post {
 		this.create_at = create_at;
 	}
 
-	public post(String contents, String img, String tags_id, String account_id, String address, String create_at ) {
-
-		this.contents = contents;
-		this.img = img;
-		this.tags_id = tags_id;
-		this.account_id = account_id;
-		this.address = address;
-		this.create_at = create_at;
-
-	}
+//	public post(String contents, String img, String tags_id, String account_id, String address, String create_at ) {
+//
+//		this.contents = contents;
+//		this.img = img;
+//		this.tags_id = tags_id;
+//		this.account_id = account_id;
+//		this.address = address;
+//		this.create_at = create_at;
+//
+//	}
 
 
 	public post(String contents, String img, String tags_id, String address, String create_at ) {
@@ -164,5 +176,11 @@ public class post {
 	}
 	public void setAccount_name(String account_name) {
 		this.account_name = account_name;
+	}
+	public String getUser_img() {
+		return user_img;
+	}
+	public void setUser_img(String user_img) {
+		this.user_img = user_img;
 	}
 }

@@ -65,10 +65,10 @@ public class PostServlet extends HttpServlet {
 		String PostImg = util.Getimg.getFileName(part);
 		System.out.println(PostImg);
 
-//		part.write("C:\\workspace\\Combined-test\\WebContent\\post-img\\" + part);
+		part.write("C:\\workspace\\Combined-test\\WebContent\\post-img\\" + PostImg);
 //		part.write("C:\\Users\\SYS-4191163\\git\\Combined-test\\WebContent\\post-img\\" + part);
 //		part.write("C:\\Users\\Onuma Kento\\git\\Combined-test\\WebContent\\post-img\\" + part);
-		part.write("C:\\Users\\SYS-4191153\\git\\Combined-test\\WebContent\\post-img\\" + part);
+//		part.write("C:\\Users\\SYS-4191153\\git\\Combined-test\\WebContent\\post-img\\" + part);
 
 
 

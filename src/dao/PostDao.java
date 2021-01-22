@@ -28,6 +28,7 @@ public class PostDao {
 		public static String create_at;
 		public static String id;
 		public static String account_name;
+		private static String user_img;
 		//INSERT文を実行するメソッドのサンプル
 		//引数は登録したい情報が格納されたBean
 		public static post insertPost(post s){
@@ -101,7 +102,7 @@ public class PostDao {
 			}
 			return s;
 		}
-		public static post searchPost(String SearchText){
+		public static ArrayList<post> searchPost(String SearchText){
 			Connection con = null;
 			PreparedStatement pstmt = null;
 			ResultSet rs = null;
@@ -120,16 +121,19 @@ public class PostDao {
 
 				// ⑥SQL文を実行してDBMSから結果を受信する
 				rs = pstmt.executeQuery();
-
+				//return用のArrayList生成
+				ArrayList<post> list = new ArrayList<post>();
 				// ⑦実行結果を含んだインスタンスからデータを取り出す
-				rs.next();
-
+				while( rs.next() ){
 				contents = rs.getString("contents");
 				tags = rs.getString("tags_id");
 				img = rs.getString("img");
 				account_id = rs.getString("account_id");
 				System.out.println(contents+tags+img+account_id);
 				result = new post(contents,tags,img,account_id);
+				list.add(result);
+				}
+				return list;
 			} catch (ClassNotFoundException e) {
 				System.out.println("JDBCドライバが見つかりません。");
 				e.printStackTrace();
@@ -162,7 +166,7 @@ public class PostDao {
 					e.printStackTrace();
 				}
 			}
-			return result;
+			return null;
 		}
 
 		//全件検索するSELECT文を実行するメソッドのサンプル
@@ -265,10 +269,7 @@ public class PostDao {
 						con = DriverManager.getConnection(url, user, pw);
 
 						//SQL文の元を作成する
-						String sql = "SELECT account.id, account.name, account.userimg, contents, img, post.create_at FROM post"
-									+ "LEFT OUTER JOIN account ON account_id = account.id"
-									+ "WHERE tags_id = ?;";
-
+						String sql = "SELECT account.id, account.name, account.userimg, contents, img, post.create_at FROM post LEFT OUTER JOIN account ON account_id = account.id WHERE tags_id = ?;";
 						//SQLを実行するための準備(構文解析)
 						pstmt = con.prepareStatement(sql);
 						pstmt.setString(1, tag);
@@ -283,14 +284,12 @@ public class PostDao {
 						//データを取得してArrayListに追加していく
 						while( rs.next() ){
 							id =rs.getString("id");
-							account_name =  rs.getString("account_name");
-							account_id = rs.getString("account_id");
+							account_name = rs.getString("name");
+							user_img =  rs.getString("userimg");
 							contents = rs.getString("contents");
 							img = rs.getString("img");
-							tags = rs.getString("tags_id");
-							address = rs.getString("address");
 							create_at = rs.getString("create_at");
-							post result = new post(id,account_name,contents,img,tags,account_id,address,create_at);
+							post result = new post(id,account_name,user_img,contents,img,create_at);
 							list.add(result);
 
 						}

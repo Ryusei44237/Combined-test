@@ -321,7 +321,7 @@
     <!-- 記事エリア -->
       <div class="twitter__block">
         <figure>
-          <img src="icon.png" />
+          <img src="${pageContext.request.contextPath}/user-img/<%=post.getUser_img()%>" />
         </figure>
         <div class="twitter__block-text">
         <div hidden><%=post.getId() %>></div>
