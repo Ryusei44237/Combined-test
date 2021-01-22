@@ -50,6 +50,11 @@ color: #ffffff;
   .username{
 	  margin: 10px 0px 20px 20px;
   }
+  .followbutton{
+	height:35px;
+	margin-top:6px;
+	margin-left:20px;
+  }
   .bg-white{
 	  margin-bottom: 15px;
 	  margin-left: 20px;
