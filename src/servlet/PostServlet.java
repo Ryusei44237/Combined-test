@@ -64,10 +64,10 @@ public class PostServlet extends HttpServlet {
 //画像取得処理
 		String PostImg = util.Getimg.getFileName(part);
 		System.out.println(PostImg);
-		part.write("C:\\workspace\\Combined-test\\WebContent\\post-img\\" + part);
-//		part.write("C:\\Users\\SYS-4191163\\git\\Combined-test\\WebContent\\post-img\\" + part);
-//		part.write("C:\\Users\\Onuma Kento\\git\\Combined-test\\WebContent\\post-img\\" + part);
-//		part.write("C:\\Users\\SYS-4191153\\git\\Combined-test\\WebContent\\post-img\\" + part);
+		part.write("C:\\workspace\\Combined-test\\WebContent\\post-img\\" + PostImg);
+//		part.write("C:\\Users\\SYS-4191163\\git\\Combined-test\\WebContent\\post-img\\" +PostImg);
+//		part.write("C:\\Users\\Onuma Kento\\git\\Combined-test\\WebContent\\post-img\\" + PostImg);
+//		part.write("C:\\Users\\SYS-4191153\\git\\Combined-test\\WebContent\\post-img\\" + PostImg);
 
 
 		post s = new post(id,account_name,PostContents,PostImg, PostTags_Id, PostAccount_Id, PostAddress, PostCreate_at);
