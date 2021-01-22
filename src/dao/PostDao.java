@@ -135,7 +135,6 @@ public class PostDao {
 					create_at = rs.getString("create_at");
 					post result = new post(id,account_name,user_img,contents,img,create_at);
 					list.add(result);
-
 				}
 				//中身の詰まったArrayListを返却する
 				System.out.println(list);
