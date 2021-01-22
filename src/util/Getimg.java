@@ -9,7 +9,7 @@ public class Getimg {
             if (dispotion.trim().startsWith("filename")) {
                 name = dispotion.substring(dispotion.indexOf("=") + 1).replace("\"", "").trim();
                 name = name.substring(name.lastIndexOf("\\") + 1);
-                System.out.println(name);
+
                 break;
             }
         }
