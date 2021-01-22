@@ -54,6 +54,7 @@ public class TimelineServlet extends HttpServlet {
 		System.out.print(tag);
 		//受け取ったタグIDが付与されている投稿を全件検索かける
 		ArrayList<post> result = PostDao.tags_post(tag);
+		System.out.println(result);
 		//daoから受け取ったresultをtimelinejspにおくる
 		request.setAttribute("list", result);
 		//timeline.jspへの遷移を書く
