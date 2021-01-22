@@ -1,7 +1,9 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,7 +19,7 @@ import dao.PostDao;
 @WebServlet("/PostSearch")
 public class PostSearch extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	public static ArrayList<post> Searchresult = new ArrayList<post>();
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -33,9 +35,11 @@ public class PostSearch extends HttpServlet {
 		// TODO Auto-generated method stub
 		String SearchText=request.getParameter("Search");
 		System.out.println(SearchText);
-		post result = PostDao.searchPost(SearchText);
+		Searchresult = PostDao.searchPost(SearchText);
 		System.out.println(PostDao.contents+"検索結果");
-		
+		String view = "/WEB-INF/view/timeline.jsp";
+		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
+		dispatcher.forward(request, response);
 	}
 
 	/**
