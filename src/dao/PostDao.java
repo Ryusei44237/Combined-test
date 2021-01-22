@@ -115,7 +115,7 @@ public class PostDao {
 				// ③DBMSとの接続を確立する
 				con = DriverManager.getConnection(url,user,pw);
 				// ④SQL文を作成する
-				String sql = "SELECT * FROM post WHERE contents LIKE '%"+SearchText+"%' ;";
+				String sql = "SELECT account.id, account.name, account.userimg, contents, img, post.create_at FROM post LEFT OUTER JOIN account ON account_id = account.id WHERE contents LIKE '%\"+SearchText+\"%';";
 				// ⑤SQL文を実行するための準備を行う
 				pstmt = con.prepareStatement(sql);
 
