@@ -313,27 +313,37 @@
     <!-- ▼タイムラインエリア scrollを外すと高さ固定解除 -->
     <div class="twitter__contents scroll">
     <!-- ここに吹き出しやスタンプのタグを追加していく -->
-    <%
-				ArrayList<post> list = (ArrayList<post>)request.getAttribute("list");
-				for(int i = 0 ; i < list.size() ; i++){
-					post post = list.get(i);
-				%>
+
+    <%ArrayList<post> list = (ArrayList<post>)request.getAttribute("list");
+		for(int i = 0 ; i < list.size() ; i++){
+			post post = list.get(i);%>
     <!-- 記事エリア -->
       <div class="twitter__block">
         <figure>
-          <img src="${pageContext.request.contextPath}/user-img/<%=post.getUser_img()%>" />
+         <img src="${pageContext.request.contextPath}/user-img/<%=post.getUser_img()%>" />
         </figure>
         <div class="twitter__block-text">
         <div hidden><%=post.getId() %>></div>
           <div class="name"><%=post.getAccount_name() %><span class="name_reply">@<%=post.getId() %></span></div>
           <div class="date"><%=post.getCreate_At() %></div>
           <div class="text">
-            <%=post.getContents() %><br><img src="${pageContext.request.contextPath}/post-img/<%=post.getImg()%>" alt=<%=post.getTags_Id()%><%=post.getAddress()%>>
-          </div>
+          	<%=post.getContents() %><br>
 
+          	<% if( %><%=post.getImg()%><% != null){ %>
+
+          			<img src="${pageContext.request.contextPath}/post-img/<%=post.getImg()%>" alt=<%=post.getTags_Id()%><%=post.getAddress()%>>
+
+          	<% }else{ %>
+
+				<img alt=<%=post.getTags_Id()%><%=post.getAddress()%>>
+
+			<% } %>
+
+            <%-- <%=post.getContents() %><br><img src="${pageContext.request.contextPath}/post-img/<%=post.getImg()%>" alt=<%=post.getTags_Id()%><%=post.getAddress()%>> --%>
+          </div>
         </div>
       </div>
-<%} %>
+	<%} %>
     </div>
     <!--　▲タイムラインエリア ここまで -->
   </div>
