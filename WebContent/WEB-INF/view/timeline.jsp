@@ -328,7 +328,7 @@
           <div class="name"><%=post.getAccount_name() %><span class="name_reply">@<%=post.getId() %></span></div>
           <div class="date"><%=post.getCreate_At() %></div>
           <div class="text">
-            <%=post.getContents() %><br><img src=<%=post.getImg()%> alt=<%=post.getTags_Id()%><%=post.getAddress()%>>
+            <%=post.getContents() %><br><img src="${pageContext.request.contextPath}/post-img/<%=post.getImg()%>" alt=<%=post.getTags_Id()%><%=post.getAddress()%>>
           </div>
 
         </div>
