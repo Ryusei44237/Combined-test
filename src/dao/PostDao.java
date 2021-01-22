@@ -106,7 +106,6 @@ public class PostDao {
 			Connection con = null;
 			PreparedStatement pstmt = null;
 			ResultSet rs = null;
-			post result = null;
 
 			try {
 				// ②JDBCドライバをロードする
@@ -115,57 +114,63 @@ public class PostDao {
 				// ③DBMSとの接続を確立する
 				con = DriverManager.getConnection(url,user,pw);
 				// ④SQL文を作成する
-				String sql = "SELECT account.id, account.name, account.userimg, contents, img, post.create_at FROM post LEFT OUTER JOIN account ON account_id = account.id WHERE contents LIKE '%\"+SearchText+\"%';";
+				String sql = "SELECT account.id, account.name, account.userimg, contents, img, post.create_at FROM post LEFT OUTER JOIN account ON account_id = account.id WHERE contents LIKE '%"+SearchText+"%';";
 				// ⑤SQL文を実行するための準備を行う
 				pstmt = con.prepareStatement(sql);
 
 				// ⑥SQL文を実行してDBMSから結果を受信する
 				rs = pstmt.executeQuery();
+
 				//return用のArrayList生成
 				ArrayList<post> list = new ArrayList<post>();
-				// ⑦実行結果を含んだインスタンスからデータを取り出す
+
+				//next()の戻り値がfalseになるまでResultSetから
+				//データを取得してArrayListに追加していく
 				while( rs.next() ){
-				contents = rs.getString("contents");
-				tags = rs.getString("tags_id");
-				img = rs.getString("img");
-				account_id = rs.getString("account_id");
-				System.out.println(contents+tags+img+account_id);
-				result = new post(contents,tags,img,account_id);
-				list.add(result);
+					id =rs.getString("id");
+					account_name = rs.getString("name");
+					user_img =  rs.getString("userimg");
+					contents = rs.getString("contents");
+					img = rs.getString("img");
+					create_at = rs.getString("create_at");
+					post result = new post(id,account_name,user_img,contents,img,create_at);
+					list.add(result);
+
 				}
+				//中身の詰まったArrayListを返却する
+				System.out.println(list);
 				return list;
-			} catch (ClassNotFoundException e) {
-				System.out.println("JDBCドライバが見つかりません。");
+
+			}  catch (SQLException e){
+				System.out.println("DBアクセスに失敗しました。");
 				e.printStackTrace();
-			} catch (SQLException e) {
-				System.out.println("DBアクセス時にエラーが発生しました。");
+			} catch (ClassNotFoundException e) {
+				System.out.println("DBアクセスに失敗しました。");
+				e.printStackTrace();
 			} finally {
-				// ⑧DBMSから切断する
+				//⑫DBとの切断処理
 				try {
-					if (rs != null) {
-						rs.close();
-					}
-				} catch (SQLException e) {
-					System.out.println("DBアクセス時にエラーが発生しました。");
-					e.printStackTrace();
-				}
-				try {
-					if (pstmt != null) {
+					//nullかチェックしないとNullPointerExceptionが
+					//発生してしまうためチェックしている。
+					if( pstmt != null){
 						pstmt.close();
 					}
-				} catch (SQLException e) {
-					System.out.println("DBアクセス時にエラーが発生しました。");
+				} catch(SQLException e){
+					System.out.println("DB切断時にエラーが発生しました。");
 					e.printStackTrace();
 				}
+
 				try {
-					if (con != null) {
+					if( con != null){
 						con.close();
 					}
-				} catch (SQLException e) {
-					System.out.println("DBアクセス時にエラーが発生しました。");
+				} catch (SQLException e){
+					System.out.println("DB切断時にエラーが発生しました。");
 					e.printStackTrace();
 				}
 			}
+
+			//途中でExceptionが発生した時はnullを返す。
 			return null;
 		}
 

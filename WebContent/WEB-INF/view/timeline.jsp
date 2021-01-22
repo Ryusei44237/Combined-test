@@ -315,7 +315,7 @@
     <!-- ここに吹き出しやスタンプのタグを追加していく -->
 
     <%ArrayList<post> list = (ArrayList<post>)request.getAttribute("list");
-		for(int i = 0 ; i < list.size() ; i++){
+		for(int i = 0 ; i <= list.size() ; i++){
 			post post = list.get(i);%>
     <!-- 記事エリア -->
       <div class="twitter__block">
