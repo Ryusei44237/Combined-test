@@ -24,6 +24,7 @@ public class MainServlet extends HttpServlet {
 	private static int count=0;
 	private static String resname;
 	private static String resid;
+	private static String miss;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -56,6 +57,7 @@ public class MainServlet extends HttpServlet {
 
 		request.setAttribute("getname",resname);
 		request.setAttribute("accountid", resid);
+		request.setAttribute("miss",miss);
 		RequestDispatcher dispatcher = request.getRequestDispatcher(View);
 		dispatcher.forward(request, response);
 	}
@@ -67,20 +69,24 @@ public class MainServlet extends HttpServlet {
 		if (name.equals(AccountDao.getname)&&pass.equals(AccountDao.getpassword)) {
 			resname=AccountDao.getname;
 			resid=AccountDao.getid;
+			miss=null;
 			View = "/WEB-INF/view/hinagata.jsp";
 		}else if (name.equals(AccountDao.getname)) {
 			System.out.println("ユーザ名は一致：パスワードが不一致"+pass);
 			count+=1;
+			miss="miss";
 			View = "login.jsp";
 		}else if(pass.equals(AccountDao.getpassword)) {
 			System.out.println("パスワードは一致：ユーザ名が不一致"+pass);
 			count+=1;
 			System.out.println(count);
+			miss="miss";
 			View = "/login.jsp";
 		}else {
 			System.out.println("ユーザ名.パスワード両方不一致"+pass);
 			count+=1;
 			System.out.println(count+pass);
+			miss="miss";
 			View = "login.jsp";
 		}
 	}

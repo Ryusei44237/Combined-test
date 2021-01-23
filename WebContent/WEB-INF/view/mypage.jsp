@@ -391,7 +391,7 @@
 												for(int i = 0 ; i < list.size() ; i++){ post post=list.get(i); %>
 													<tr>
 														<th scope="row" style="width: 100px;">1</th>
-														<td><img src="../image/沖縄海.jpg" alt="" class="rounded-circle"
+														<td><img src="${pageContext.request.contextPath}/user-img/<%=post.getUser_img()%>" alt="" class="rounded-circle"
 																style="margin-left: 0px; height: 30px; width: 30px;">
 															<%=post.getId() %>
 																<p class="text-justify">

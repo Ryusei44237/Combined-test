@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@page import="java.util.*" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,7 +55,7 @@
 				<label for="password"></label> <input type="password"
 					name="password" required="required" placeholder="パスワード"></input>
 			</div>
-			<p id="misstext">　</p>
+			<div id="misstext"></div>
 			<div class="button-panel">
 			<input type="hidden" name="judge" value="log">
 				<input type="submit" class="button" title="Sign In" value="サインイン"></input>
@@ -69,13 +70,16 @@
 			</p>
 		</div>
 	</div>
+	<%
+	String miss= (String)request.getAttribute("miss");
+	%>
 	<script>
 		//変数受け取り
-		var judge = <%=request.getAttribute("judgement")%>
+		var miss = "<%=miss%>";
 		//コンソール表示
-		console.log("judgeの中身は："+judge);
+		console.log("judgeの中身は："+miss);
 		//falseを受け取っていたら
-		if(judge == false){
+		if(miss == "miss"){
 			console.log("分岐に入りました");
 			var elem = document.getElementById("misstext");
 			//パスワードフォームの下に赤文字を表示する

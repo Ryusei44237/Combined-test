@@ -102,6 +102,7 @@ public class PostDao {
 			}
 			return s;
 		}
+		//検索キーワードをもとに条件に一致する投稿を全件表示
 		public static ArrayList<post> searchPost(String SearchText){
 			Connection con = null;
 			PreparedStatement pstmt = null;
@@ -173,7 +174,7 @@ public class PostDao {
 			return null;
 		}
 
-		//全件検索するSELECT文を実行するメソッドのサンプル
+		//アカウントIDで投稿内容を全件検索するSELECT文を実行するメソッドのサンプル
 		public static ArrayList<post> allPost(String id){
 			//アクセスに必要な変数の初期化
 			Connection con = null;
@@ -192,7 +193,7 @@ public class PostDao {
 				con = DriverManager.getConnection(url, user, pw);
 
 				//SQL文の元を作成する
-				String sql = "SELECT * FROM post where account_id = ?;";
+				String sql = "select account.id,account.name,account.userimg,contents,img,post.create_at from post left outer join account on account_id = account.id where account_id=?;";
 
 				//SQLを実行するための準備(構文解析)
 				pstmt = con.prepareStatement(sql);
@@ -207,16 +208,14 @@ public class PostDao {
 				//next()の戻り値がfalseになるまでResultSetから
 				//データを取得してArrayListに追加していく
 				while( rs.next() ){
-					account_id = rs.getString("account_id");
-					account_name = rs.getString("account_name");
+					account_id = rs.getString("id");
+					account_name = rs.getString("name");
 					contents = rs.getString("contents");
 					img = rs.getString("img");
-					tags = rs.getString("tags_id");
-					address = rs.getString("address");
+					user_img = rs.getString("userimg");
 					create_at = rs.getString("create_at");
-					post result = new post(contents,account_name,img,tags,account_id,address,create_at);
+					post result = new post(account_id,account_name,user_img,contents,img,create_at);
 					list.add(result);
-
 				}
 				//中身の詰まったArrayListを返却する
 				System.out.println(list);
@@ -254,7 +253,7 @@ public class PostDao {
 			//途中でExceptionが発生した時はnullを返す。
 			return null;
 		}
-		//全件検索するSELECT文を実行するメソッドのサンプル
+		//タグて紐づけて全件検索するSELECT文を実行するメソッドのサンプル
 				public static ArrayList<post> tags_post(String tag){
 					//アクセスに必要な変数の初期化
 					Connection con = null;
@@ -287,14 +286,13 @@ public class PostDao {
 						//next()の戻り値がfalseになるまでResultSetから
 						//データを取得してArrayListに追加していく
 						while( rs.next() ){
-							account_id = rs.getString("account_id");
-							account_name = rs.getString("account_name");
+							account_id = rs.getString("id");
+							account_name = rs.getString("name");
 							contents = rs.getString("contents");
 							img = rs.getString("img");
-							tags = rs.getString("tags_id");
-							address = rs.getString("address");
+							user_img = rs.getString("userimg");
 							create_at = rs.getString("create_at");
-							post result = new post(contents,account_name,img,tags,account_id,address,create_at);
+							post result = new post(account_id,account_name,user_img,contents,img,create_at);
 							list.add(result);
 
 						}
@@ -334,7 +332,7 @@ public class PostDao {
 					//途中でExceptionが発生した時はnullを返す。
 					return null;
 				}
-				//全件検索するSELECT文を実行するメソッドのサンプル
+				//画像だけを全件検索するSELECT文を実行するメソッドのサンプル
 				public static ArrayList<post> image(String id){
 					//アクセスに必要な変数の初期化
 					Connection con = null;

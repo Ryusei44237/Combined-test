@@ -54,11 +54,11 @@ public static ArrayList<post> imagearray = new ArrayList<post>();
 		path ="/sotuken/user-img/"+path;
 		request.setAttribute("userimg",path);
 
-		int FollowCount = FollowCount(Integer.parseInt(id));
-		request.setAttribute("followcount", FollowCount);
-
-		int FollowerCount = FollowerCount(Integer.parseInt(id));
-		request.setAttribute("followercount", FollowerCount);
+//		int FollowCount = FollowCount(Integer.parseInt(id));
+//		request.setAttribute("followcount", FollowCount);
+//
+//		int FollowerCount = FollowerCount(Integer.parseInt(id));
+//		request.setAttribute("followercount", FollowerCount);
 
 
 //		全画像取得
