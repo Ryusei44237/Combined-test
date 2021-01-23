@@ -356,7 +356,7 @@
     header終了・ マイページ（ホーム）開始
   -->
 					<div class="home-page">
-						<img src="{pageContext.request.contextPath}/app-image/気象庁.jpg" alt="ユーザのトップ画像"
+						<img src="${pageContext.request.contextPath}/user-img/<%=request.getAttribute("userimg")%>" alt="ユーザのトップ画像"
 							class="rounded-circle" style="height: 100px; width: 100px;">
 
 						<!-- プロフィール -->

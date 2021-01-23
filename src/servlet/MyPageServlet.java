@@ -51,7 +51,6 @@ public static ArrayList<post> imagearray = new ArrayList<post>();
 		request.setAttribute("tell",AccountDao.gettell);
 		request.setAttribute("update_at",AccountDao.getupdate_at);
 		String path = AccountDao.user_img;
-		path ="/sotuken/user-img/"+path;
 		request.setAttribute("userimg",path);
 
 //		int FollowCount = FollowCount(Integer.parseInt(id));

@@ -15,7 +15,7 @@ public class FollowDao {
 	//①DBアクセスに必要な情報の定数を定義
 
 	//接続先DBのURL(jdbc:mysql://[ホスト名orIPアドレス]:[ポート番号]/[データベース名]?serverTimezone=JST)
-	private static final String url = "jdbc:mysql://localhost:3306/application?serverTimezone=JST";
+	private static final String url = "jdbc:mysql://localhost/application?serverTimezone=JST";
 	//ユーザ
 	private static final String user = "root";
 	//パスワード
