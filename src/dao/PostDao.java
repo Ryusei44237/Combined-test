@@ -296,7 +296,7 @@ public class PostDao {
 							create_at = rs.getString("create_at");
 							post result = new post(contents,account_name,img,tags,account_id,address,create_at);
 							list.add(result);
-		
+
 						}
 						//中身の詰まったArrayListを返却する
 						System.out.println(list);
@@ -353,7 +353,7 @@ public class PostDao {
 						con = DriverManager.getConnection(url, user, pw);
 
 						//SQL文の元を作成する
-						String sql = "SELECT img FROM post where id = ?;";
+						String sql = "SELECT img FROM post where account_id = ?;";
 
 						//SQLを実行するための準備(構文解析)
 						pstmt = con.prepareStatement(sql);
