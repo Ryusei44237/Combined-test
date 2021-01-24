@@ -36,7 +36,7 @@
     <form>
       <h2>パスワードを忘れた方</h2>
       <p>会員登録時に登録された生年月日と<br>メールアドレスを入力してください。</p>
-        
+
         <div class="form-group col-md-12">
           <label for="exampleInputEmail1">メールアドレス</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="メールアドレスの入力...">
@@ -103,7 +103,7 @@
           </div>
 
         </div>
-        
+
         <div class="form-group">
         <input type="submit" class="btn btn-primary" style="margin-bottom: 5px;" value="メールを送信する">
         </div>
