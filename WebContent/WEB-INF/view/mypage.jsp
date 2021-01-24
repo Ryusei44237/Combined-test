@@ -1,28 +1,27 @@
 <%@page import="Bean.account" %>
-	<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-		<%@page import="java.util.ArrayList" %>
-			<%@ page import="Bean.post" %>
-				<!-- マイページ　html -->
-				<!DOCTYPE html>
-				<html lang="ja">
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@page import="java.util.ArrayList" %>
+<%@ page import="Bean.post" %>
+<!-- マイページ　html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<!-- 確認 -->
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/mypage.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+		crossorigin="anonymous">
+	<!-- font awesome CSS -->
+	<script src="https://kit.fontawesome.com/86a6bb02b6.js" crossorigin="anonymous"></script>
+	<!-- end -->
 
-				<head>
-					<!-- 確認 -->
-					<meta charset="utf-8">
-					<link rel="stylesheet" href="${pageContext.request.contextPath}/css/mypage.css">
-					<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-					<!-- Bootstrap CSS -->
-					<link rel="stylesheet"
-						href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-						integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-						crossorigin="anonymous">
-					<!-- font awesome CSS -->
-					<script src="https://kit.fontawesome.com/86a6bb02b6.js" crossorigin="anonymous"></script>
-					<!-- end -->
-
-					<title>
-						<%=request.getAttribute("name")%>のページ
-					</title>
+	<title>
+		<%=request.getAttribute("name")%>のページ
+	</title>
 
 
 					<!-- 投稿ボタンを押下した際に出てくる投稿モーダル -->
@@ -334,7 +333,7 @@
 							<div id="h_item4">
 								<div id="searchform">
 									<form class="form-inline my-2 my-lg-0" style="width: 20vw; display: flex;"
-										action="/sotuken-project/PostSearch" method="get">
+										action="/Combined-test/PostSearch" method="get">
 										<input class="form-control mr-sm-2" type="text" name="Search"
 											placeholder="Search" aria-label="Search">
 										<button class="btn btn-outline-success my-2 my-sm-0"
