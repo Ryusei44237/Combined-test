@@ -63,8 +63,8 @@ public class CreateAccountMethod extends HttpServlet {
 		//画像取得機能
 		String userimg = util.Getimg.getFileName(part);
 
-//		part.write("C:\\workspace\\Combined-test\\WebContent\\user-img\\" + userimg);
-		part.write("C:\\Users\\SYS-4191163\\git\\Combined-test\\WebContent\\user-img\\" + userimg);
+		part.write("opt\\tomcat\\apache-tomcat-9.0.41\\webapps\\Combined-test\\user-img" + userimg);
+		// part.write("C:\\Users\\SYS-4191163\\git\\Combined-test\\WebContent\\user-img\\" + userimg);
 //		part.write("C:\\Users\\Onuma Kento\\git\\Combined-test\\WebContent\\user-img\\" + userimg);
 //		part.write("C:\\Users\\SYS-4191153\\git\\Combined-test\\WebContent\\user-img\\" + userimg);
 
