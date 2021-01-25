@@ -361,7 +361,7 @@
 						<div class="profile">
 							<div class="username">
 								<h1>ユーザ名を入力</h1>
-								<button class="followbutton">フォロー</button>
+								<!-- <button class="followbutton">フォロー</button> -->
 							</div>
 							<div class="bg-white rounded">
 								<p class="text-justify" style="background:#fcfcfc">こんにちは！</p>
