@@ -341,8 +341,7 @@
 									</form>
 								</div>
 								<!-- 投稿ボタン -->
-								<button type="button" data-toggle="modal" data-target="#exampleModal"
-									class="btn btn-primary" id="post_button">投稿</button>
+								<button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary" id="post_button">投稿</button>
 								<!-- 設定ボタン -->
 								<div id="setting">
 									<button type="button" class="btn btn-primary" data-toggle="modal"
