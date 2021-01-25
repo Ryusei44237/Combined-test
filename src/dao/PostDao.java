@@ -115,7 +115,7 @@ public class PostDao {
 				// ③DBMSとの接続を確立する
 				con = DriverManager.getConnection(url,user,pw);
 				// ④SQL文を作成する
-				String sql = "SELECT account.id, account.name, account.userimg, contents, img, post.create_at FROM post LEFT OUTER JOIN account ON account_id = account.id WHERE contents LIKE '%"+SearchText+"%';";
+				String sql = "SELECT account.id, account.name, account.userimg, contents, img, post.create_at FROM post LEFT OUTER JOIN account ON account_id = account.id WHERE contents LIKE '%"+SearchText+"%' order by post.create_at desc ;";
 				// ⑤SQL文を実行するための準備を行う
 				pstmt = con.prepareStatement(sql);
 
@@ -193,7 +193,7 @@ public class PostDao {
 				con = DriverManager.getConnection(url, user, pw);
 
 				//SQL文の元を作成する
-				String sql = "select account.id,account.name,account.userimg,contents,img,post.create_at from post left outer join account on account_id = account.id where account_id=?;";
+				String sql = "select account.id,account.name,account.userimg,contents,img,post.create_at from post left outer join account on account_id = account.id where account_id=? order by post.create_at desc;";
 
 				//SQLを実行するための準備(構文解析)
 				pstmt = con.prepareStatement(sql);
@@ -272,7 +272,7 @@ public class PostDao {
 						con = DriverManager.getConnection(url, user, pw);
 
 						//SQL文の元を作成する
-						String sql = "SELECT account.id, account.name, account.userimg, contents, img, post.create_at FROM post LEFT OUTER JOIN account ON account_id = account.id WHERE tags_id = ?;";
+						String sql = "SELECT account.id, account.name, account.userimg, contents, img, post.create_at FROM post LEFT OUTER JOIN account ON account_id = account.id WHERE tags_id = ? order by post.create_at desc;";
 						//SQLを実行するための準備(構文解析)
 						pstmt = con.prepareStatement(sql);
 						pstmt.setString(1, tag);
