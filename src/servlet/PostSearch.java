@@ -38,7 +38,7 @@ public class PostSearch extends HttpServlet {
 		System.out.println(SearchText);
 		Searchresult = PostDao.searchPost(SearchText);
 		System.out.println(PostDao.contents+"検索結果");
-		request.setAttribute("ID",PostDao.account_id)
+		request.setAttribute("ID",PostDao.account_id);
 		request.setAttribute("list",Searchresult);
 		String view = "/WEB-INF/view/timeline.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
