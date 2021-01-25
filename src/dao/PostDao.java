@@ -137,7 +137,9 @@ public class PostDao {
 					post result = new post(id,account_name,user_img,contents,img,create_at);
 					list.add(result);
 				}
-				account_id=rs.getString(id);
+
+				//account_id=rs.getString(id);
+
 				//中身の詰まったArrayListを返却する
 				System.out.println(list);
 				return list;
