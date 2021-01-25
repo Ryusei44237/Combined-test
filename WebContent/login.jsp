@@ -72,12 +72,25 @@
 	</div>
 	<%
 	String miss= (String)request.getAttribute("miss");
+	String name=(String)request.getAttribute("inputname");
+	String password=(String)request.getAttribute("inputpass");
+	String dbname = (String)request.getAttribute("getname");
+	String dbpass = (String)request.getAttribute("getpass");
 	%>
 	<script>
 		//変数受け取り
+
 		var miss = "<%=miss%>";
+		var name = "<%=name%>";
+		var password = "<%=password%>";
+		var dbname= "<%=dbname%>";
+		var dbpass = "<%=dbpass%>";
 		//コンソール表示
 		console.log("judgeの中身は："+miss);
+		console.log(name);
+		console.log(password);
+		console.log(dbname);
+		console.log(dbpass);
 		//falseを受け取っていたら
 		if(miss == "miss"){
 			console.log("分岐に入りました");

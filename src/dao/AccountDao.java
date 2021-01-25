@@ -116,12 +116,11 @@ public class AccountDao {
 				// ③DBMSとの接続を確立する
 				con = DriverManager.getConnection(url,user,pw);
 				// ④SQL文を作成する
-				String sql = "SELECT id,name,password,COUNT(name = ? or null) as count FROM account where name=? or password=?";
+				String sql = "SELECT id,name,password FROM account where name=? or password=?;";
 				// ⑤SQL文を実行するための準備を行う
 				pstmt = con.prepareStatement(sql);
 				pstmt.setString(1, name);
-				pstmt.setString(2,name);
-				pstmt.setString(3, pass);
+				pstmt.setString(2, pass);
 
 
 				// ⑥SQL文を実行してDBMSから結果を受信する
@@ -129,11 +128,10 @@ public class AccountDao {
 
 				// ⑦実行結果を含んだインスタンスからデータを取り出す
 				if(rs.next()) {
-					String countdata=rs.getString("count");
 					getname=rs.getString("name");
 					getpassword=rs.getString("password");
 					getid=rs.getString("id");
-					result = new account(countdata);
+
 				}
 			} catch (ClassNotFoundException e) {
 				System.out.println("JDBCドライバが見つかりません。");

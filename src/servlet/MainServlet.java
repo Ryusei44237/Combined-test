@@ -25,6 +25,8 @@ public class MainServlet extends HttpServlet {
 	private static String resname;
 	private static String resid;
 	private static String miss;
+	private static String pass2;
+	private static String hpass;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -50,14 +52,20 @@ public class MainServlet extends HttpServlet {
 		String name=request.getParameter("name");
 		String pass=request.getParameter("password");
 		String value = request.getParameter("value");
+
 //取得情報比較機能
 		login(name,pass);
 //試行回数記録機能
-		Judgment(count,name,pass);
-
+		// Judgment(count,name,pass);
+		request.setAttribute("inputname",name);
+		request.setAttribute("inputpass",hpass);
 		request.setAttribute("getname",resname);
+		request.setAttribute("getpass",pass2);
 		request.setAttribute("accountid", resid);
 		request.setAttribute("miss",miss);
+
+		System.out.println(name+":"+hpass);
+		System.out.println(resname+":"+pass2);
 		RequestDispatcher dispatcher = request.getRequestDispatcher(View);
 		dispatcher.forward(request, response);
 	}
@@ -65,28 +73,40 @@ public class MainServlet extends HttpServlet {
 		account result = AccountDao.searchDao(name,pass);
 //		パスワードハッシュ化機能
 		String salt = "hashSNS";
-		pass = Hash(salt,pass);
-		if (name.equals(AccountDao.getname)&&pass.equals(AccountDao.getpassword)) {
+		hpass = Hash(salt,pass);
+		if (name.equals(AccountDao.getname)&&hpass.equals(AccountDao.getpassword)) {
 			resname=AccountDao.getname;
 			resid=AccountDao.getid;
 			miss=null;
 			View = "/WEB-INF/view/hinagata.jsp";
 		}else if (name.equals(AccountDao.getname)) {
-			System.out.println("ユーザ名は一致：パスワードが不一致"+pass);
+			System.out.println("ユーザ名は一致：パスワードが不一致"+hpass);
 			count+=1;
 			miss="miss";
+			resname=AccountDao.getname;
+			resid=AccountDao.getid;
+			pass2= AccountDao.getpassword;
+//			System.out.println(resname+pass2);
 			View = "login.jsp";
-		}else if(pass.equals(AccountDao.getpassword)) {
-			System.out.println("パスワードは一致：ユーザ名が不一致"+pass);
+		}else if(hpass.equals(AccountDao.getpassword)) {
+			System.out.println("パスワードは一致：ユーザ名が不一致"+hpass);
 			count+=1;
 			System.out.println(count);
 			miss="miss";
+			resname=AccountDao.getname;
+			resid=AccountDao.getid;
+			pass2= AccountDao.getpassword;
+//			System.out.println(resname+pass2);
 			View = "/login.jsp";
 		}else {
-			System.out.println("ユーザ名.パスワード両方不一致"+pass);
+			System.out.println("ユーザ名.パスワード両方不一致"+hpass);
 			count+=1;
-			System.out.println(count+pass);
+			System.out.println(count+hpass);
 			miss="miss";
+			resname=AccountDao.getname;
+			resid=AccountDao.getid;
+			pass2= AccountDao.getpassword;
+//			System.out.println(resname+pass2);
 			View = "login.jsp";
 		}
 	}
@@ -100,7 +120,7 @@ public class MainServlet extends HttpServlet {
 	public static String Hash(String salt,String password) {
 		String hashedStr = GenerateHashedPw.getSafetyPassword(password, salt);
 		String hashedStr2 = GenerateHashedPw.getSafetyPassword(password, salt);
-		System.out.println(hashedStr2);
+//		System.out.println(hashedStr2);
 		return hashedStr2;
 
 	}
