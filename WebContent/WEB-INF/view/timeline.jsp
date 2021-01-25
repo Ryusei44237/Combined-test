@@ -391,7 +391,7 @@
 					<div class="text">
 						<%=post.getContents() %><br>
 						<img
-							src="${pageContext.request.contextPath}/post-img/<%=post.getImg()%>" />
+							src="${pageContext.request.contextPath}/post-img/<%=post.getImg()%>" width="325" height="270">
 					</div>
 				</div>
 			</div>
