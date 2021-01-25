@@ -378,8 +378,7 @@
 			<!-- 記事エリア -->
 			<div class="twitter__block">
 				<figure>
-					<img
-						src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/user-img/<%=post.getUser_img()%>" />
+					<img src="${pageContext.request.contextPath}/user-img/<%=post.getUser_img()%>" />
 				</figure>
 				<div class="twitter__block-text">
 					<div hidden><%=post.getId() %></div>
@@ -389,8 +388,7 @@
 					<div class="date"><%=post.getCreate_At() %></div>
 					<div class="text">
 						<%=post.getContents() %><br>
-						<img
-							src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/post-img/<%=post.getImg()%>" width="325" height="270">
+						<img src="${pageContext.request.contextPath}/post-img/<%=post.getImg()%>" width="325" height="270"/>
 					</div>
 				</div>
 			</div>

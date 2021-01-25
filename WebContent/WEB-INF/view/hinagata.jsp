@@ -91,6 +91,8 @@
 						method="post">
 						<input class="form-control mr-sm-2" type="text" name="Search"
 							placeholder="Search" aria-label="Search">
+							<input type="hidden" name="account_id"
+							value=<%=request.getAttribute("accountid")%>>
 						<button class="btn btn-outline-success my-2 my-sm-0"
 							type="submit">Search</button>
 					</form>
@@ -159,6 +161,8 @@
 									<input type="hidden" value="台風" name="tag"> <input
 										type="submit" class="btn btn-primary stretched-link"
 										value="タイムラインへgo">
+										<input type="hidden" name="account_id"
+							value=<%=request.getAttribute("accountid")%>>
 								</form>
 							</div>
 						</div>
@@ -172,6 +176,8 @@
 									<input type="hidden" value="東日本大震災" name="tag"> <input
 										type="submit" class="btn btn-primary stretched-link"
 										value="タイムラインへgo">
+										<input type="hidden" name="account_id"
+							value=<%=request.getAttribute("accountid")%>>
 								</form>
 							</div>
 						</div>
@@ -185,6 +191,8 @@
 									<input type="hidden" value="津波" name="tag"> <input
 										type="submit" class="btn btn-primary stretched-link"
 										value="タイムラインへgo">
+										<input type="hidden" name="account_id"
+							value=<%=request.getAttribute("accountid")%>>
 								</form>
 							</div>
 						</div>
@@ -203,6 +211,8 @@
 									<input type="hidden" value="洪水" name="tag"> <input
 										type="submit" class="btn btn-primary stretched-link"
 										value="タイムラインへgo">
+										<input type="hidden" name="account_id"
+							value=<%=request.getAttribute("accountid")%>>
 								</form>
 							</div>
 						</div>
@@ -216,6 +226,8 @@
 									<input type="hidden" value="地震" name="tag"> <input
 										type="submit" class="btn btn-primary stretched-link"
 										value="タイムラインへgo">
+										<input type="hidden" name="account_id"
+							value=<%=request.getAttribute("accountid")%>>
 								</form>
 							</div>
 						</div>
@@ -229,6 +241,8 @@
 									<input type="hidden" value="台風" name="tag"> <input
 										type="submit" class="btn btn-primary stretched-link"
 										value="タイムラインへgo">
+										<input type="hidden" name="account_id"
+							value=<%=request.getAttribute("accountid")%>>
 								</form>
 							</div>
 						</div>

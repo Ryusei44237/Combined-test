@@ -354,8 +354,7 @@
     header終了・ マイページ（ホーム）開始
   -->
 					<div class="home-page">
-						<img src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/user-img/<%=request.getAttribute("userimg")%>" alt="ユーザのトップ画像"
-							class="rounded-circle" style="height: 100px; width: 100px;">
+						<img src="${pageContext.request.contextPath}/user-img/<%=request.getAttribute("userimg")%>" alt="ユーザのトップ画像"class="rounded-circle" style="height: 100px; width: 100px;">
 
 						<!-- プロフィール -->
 						<div class="profile">
@@ -389,7 +388,7 @@
 												for(int i = 0 ; i < list.size() ; i++){ post post=list.get(i); %>
 													<tr>
 														<th scope="row" style="width: 100px;">1</th>
-														<td><img src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/user-img/<%=post.getUser_img()%>" alt="" class="rounded-circle"
+														<td><img srgit c="${pageContext.request.contextPath}/user-img/<%=post.getUser_img()%>" alt="" class="rounded-circle"
 																style="margin-left: 0px; height: 30px; width: 30px;">
 															<%=post.getId() %>
 																<p class="text-justify">
@@ -435,7 +434,7 @@
 												<div>
 													<% ArrayList<post> list2 = (ArrayList<post>)request.getAttribute("list");
 														for(int i = 0 ; i < list2.size() ; i++){ post post=list2.get(i); %>
-													<a> <img src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/user-img/<%=post.getImg()%>"
+													<a> <img src="${pageContext.request.contextPath}/post-img/<%=post.getImg()%>"
 															class="img-circle"> <span class="fa-stack fa-lg"> <i
 																class="fa fa-circle fa-stack-2x"></i> <i
 																class="fa fa-times fa-stack-1x fa-inverse"></i>
