@@ -1,17 +1,19 @@
 package servlet;
 
-import java.io.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import java.util.*;
-
-import java.util.Properties;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Date;
-import javax.mail.Session;
-import javax.mail.Message;
-import javax.mail.Transport;
-import javax.mail.internet.MimeMessage;
+import java.util.Enumeration;
+import java.util.Properties;
+
 import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.mysql.cj.protocol.Message;
 
 public class sndmail extends HttpServlet {
 
