@@ -354,8 +354,7 @@
     header終了・ マイページ（ホーム）開始
   -->
 					<div class="home-page">
-						<img src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/user-img/<%=request.getAttribute("userimg")%>" alt="ユーザのトップ画像"
-							class="rounded-circle" style="height: 100px; width: 100px;">
+						<img src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/user-img/<%=request.getAttribute("userimg")%>" alt="ユーザのトップ画像"class="rounded-circle" style="height: 100px; width: 100px;">
 
 						<!-- プロフィール -->
 						<div class="profile">
