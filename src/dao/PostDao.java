@@ -299,7 +299,7 @@ public class PostDao {
 						}
 						//中身の詰まったArrayListを返却する
 						System.out.println(list);
-						account_id=rs.getString(id);
+
 						return list;
 
 					}  catch (SQLException e){

@@ -37,6 +37,7 @@ public class TimelineServlet extends HttpServlet {
 		//タグIDを受け取る
 		String tag=null;
 		tag=request.getParameter("tag");
+		 String id=request.getParameter("id");
 		switch(tag) {
 			case "台風":
 				tag="1";
