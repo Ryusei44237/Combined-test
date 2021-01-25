@@ -10,27 +10,27 @@
     <title>Registration</title>
 </head>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-    <a class="nav-link disabled" href="../html/toppage.html">
-      <div class="aaa">
-      <img src="../image/空.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
-      卒研ページ
-      </div>
-    </a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNav">
-<ul class="navbar-nav">
-  <li class="nav-item active">
-    <a class="nav-link" href="../html/login.html">ログイン<span class="sr-only">(current)</span></a>
-  </li>
-  <li class="nav-item active">
-    <a class="nav-link disabled" href="test.html">登録</a>
-  </li>
-  </ul>
-</div>
-</nav>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light " style="padding:0px 16px 0px 16px;">
+		<a class="nav-link disabled" href="../html/toppage.html">
+		<div id="h_item1">
+                <div id="logo">
+                    <img src="https://getbootstrap.jp/docs/4.5/assets/brand/bootstrap-solid.svg" alt="">
+                </div>
+        </div>
+		</a>
+			<ul class="navbar-nav">
+				<li class="nav-item active"><a class="nav-link"
+					href="/Combined-test/login.jsp"><h5>ログイン</h5><span class="sr-only">(current) </span></a>
+				</li>
+				<li class="nav-item active"><a class="nav-link disabled"
+					><h5>登録</h5></a></li>
+			</ul>
+		<div id="h_item3" style="margin-left: 13%;">
+                <div id="title">
+                    <p id="title-text" style="margin:0 0 16px 0;">災害情報共有</p>
+                </div>
+            </div>
+	</nav>
 </header>
 <body>
     <form>
@@ -45,6 +45,7 @@
         <div class="form-row" style="margin: 0px 28px 0px 28px;">
             <div class="form-group col-md-4">
                 <input type="text" class="form-control" id="exampleInputYear" placeholder="年...">
+
               </div>
 
           <div class="form-group col-md-4">
