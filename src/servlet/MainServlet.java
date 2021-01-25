@@ -49,12 +49,16 @@ public class MainServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 //ログイン情報取得機能
-		String name=request.getParameter("name");
-		String pass=request.getParameter("password");
-		String value = request.getParameter("value");
-
+		String name=request.getParameter("name");//jspから名前を取得
+		String pass=request.getParameter("password");//jspからパスワードを取得
+		String value = request.getParameter("value");//
+		System.out.println(name+pass);
+		//ハッシュ化
+		String salt = "hashSNS";
+		hpass = Hash(salt,pass);
+		System.out.println(hpass);
 //取得情報比較機能
-		login(name,pass);
+		login(name,hpass);
 //試行回数記録機能
 		// Judgment(count,name,pass);
 		request.setAttribute("inputname",name);
@@ -63,7 +67,6 @@ public class MainServlet extends HttpServlet {
 		request.setAttribute("getpass",pass2);
 		request.setAttribute("accountid", resid);
 		request.setAttribute("miss",miss);
-
 		System.out.println(name+":"+hpass);
 		System.out.println(resname+":"+pass2);
 		RequestDispatcher dispatcher = request.getRequestDispatcher(View);
@@ -71,50 +74,12 @@ public class MainServlet extends HttpServlet {
 	}
 	public static void login(String name,String pass) {
 		account result = AccountDao.searchDao(name,pass);
-//		パスワードハッシュ化機能
-		String salt = "hashSNS";
-		hpass = Hash(salt,pass);
+		System.out.println(result);
 		if (name.equals(AccountDao.getname)&&hpass.equals(AccountDao.getpassword)) {
 			resname=AccountDao.getname;
 			resid=AccountDao.getid;
 			miss=null;
 			View = "/WEB-INF/view/hinagata.jsp";
-		}else if (name.equals(AccountDao.getname)) {
-			System.out.println("ユーザ名は一致：パスワードが不一致"+hpass);
-			count+=1;
-			miss="miss";
-			resname=AccountDao.getname;
-			resid=AccountDao.getid;
-			pass2= AccountDao.getpassword;
-//			System.out.println(resname+pass2);
-			View = "login.jsp";
-		}else if(hpass.equals(AccountDao.getpassword)) {
-			System.out.println("パスワードは一致：ユーザ名が不一致"+hpass);
-			count+=1;
-			System.out.println(count);
-			miss="miss";
-			resname=AccountDao.getname;
-			resid=AccountDao.getid;
-			pass2= AccountDao.getpassword;
-//			System.out.println(resname+pass2);
-			View = "/login.jsp";
-		}else {
-			System.out.println("ユーザ名.パスワード両方不一致"+hpass);
-			count+=1;
-			System.out.println(count+hpass);
-			miss="miss";
-			resname=AccountDao.getname;
-			resid=AccountDao.getid;
-			pass2= AccountDao.getpassword;
-//			System.out.println(resname+pass2);
-			View = "login.jsp";
-		}
-	}
-	public static void Judgment(int count,String name,String pass) {
-		if (count<6) {
-			login(name, pass);
-		}else if (count>=6) {
-			View = "forgetpass.jsp";
 		}
 	}
 	public static String Hash(String salt,String password) {

@@ -37,6 +37,7 @@ public class TimelineServlet extends HttpServlet {
 		//タグIDを受け取る
 		String tag=null;
 		tag=request.getParameter("tag");
+		 String id=request.getParameter("id");
 		switch(tag) {
 			case "台風":
 				tag="1";
@@ -57,7 +58,7 @@ public class TimelineServlet extends HttpServlet {
 		System.out.println(result);
 		//daoから受け取ったresultをtimelinejspにおくる
 		request.setAttribute("list", result);
-		request.setAttribute("ID",PostDao.account_id)
+		request.setAttribute("ID",PostDao.account_id);
 		//timeline.jspへの遷移を書く
 		String view = "/WEB-INF/view/timeline.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);

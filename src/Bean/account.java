@@ -44,9 +44,9 @@ public class account {
 		this.update_at = update_at;
 		this.userimg = userimg;
 	}
-	public account(String count,  String name,String password) {
+	public account(String id,  String name,String password) {
 		// TODO 自動生成されたコンストラクター・スタブ
-		this.count=count;
+		this.id=id;
 		this.name=name;
 		this.password=password;
 	}
