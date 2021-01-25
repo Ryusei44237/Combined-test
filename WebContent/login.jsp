@@ -65,9 +65,9 @@
 			<p>
 				<a href="signup.jsp">アカウントを作成</a>
 			</p>
-			<p>
-				<a href="forgotpass.jsp">パスワードを忘れた場合</a>
-			</p>
+			<!-- <p>
+				 <a href="forgotpass.jsp">パスワードを忘れた場合</a>
+			</p> -->
 		</div>
 	</div>
 	<%
