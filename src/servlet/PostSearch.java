@@ -32,6 +32,7 @@ public class PostSearch extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF8");
 		// TODO Auto-generated method stub
 		String SearchText=request.getParameter("Search");
 		System.out.println(SearchText);
