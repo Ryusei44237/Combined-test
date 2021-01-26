@@ -90,8 +90,12 @@ public class PostServlet extends HttpServlet {
 			String view ="/WEB-INF/view/hinagata.jsp";
 			RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 			dispatcher.forward(request, response);
-		}else {
+		}else if(Load.equals("timeline")){
 			String view ="/WEB-INF/view/timeline.jsp";
+			RequestDispatcher dispatcher = request.getRequestDispatcher(view);
+			dispatcher.forward(request, response);
+		}else if(Load.equals("mypage")) {
+			String view ="/WEB-INF/view/mypage.jsp";
 			RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 			dispatcher.forward(request, response);
 		}

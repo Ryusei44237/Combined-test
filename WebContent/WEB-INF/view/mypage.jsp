@@ -23,7 +23,7 @@
 		<%=request.getAttribute("name")%>のページ
 	</title>
 
-
+				<body style="background:#fcfcfc;">
 					<!-- 投稿ボタンを押下した際に出てくる投稿モーダル -->
 				 <div id="modal">
        	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
@@ -277,7 +277,7 @@
 				</head>
 				<!-- ヘッド終了　以下body -->
 
-				<body style="background:#fcfcfc;">
+
 					<!-- hedear開始 -->
 					<section class="header">
 						<div class="header_items">
@@ -376,25 +376,6 @@
 																			<%=post.getTags_Id()%>
 																				<%=post.getCreate_At() %>
 																</p>
-																<!--twitter--> <a
-																	class="btn-social-square btn-social-square--twitter">
-																	<i class="fa fa-twitter"></i>
-																</a>
-																<!--facebook--> <a
-																	class="btn-social-square btn-social-square--facebook">
-																	<i class="fa fa-facebook"></i>
-																</a>
-																<!--はてぶ--> <a
-																	class="btn-social-square btn-social-square--hatebu">
-																	B! </a>
-																<!--pocket-->
-																<a class="btn-social-square btn-social-square--pocket">
-																	<i class="fa fa-get-pocket"></i>
-																</a>
-																<!--feedly--> <a
-																	class="btn-social-square btn-social-square--feedly">
-																	<i class="fa fa-rss"></i>
-																</a>
 														</td>
 
 
