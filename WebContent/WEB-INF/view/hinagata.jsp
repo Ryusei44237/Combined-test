@@ -44,7 +44,7 @@
 								</select>
 							</div>
 							<input type="hidden" name="value" value="post">
-							<button type="submit" class="btn btn-primary" id="submit">投稿</button>
+							<button type="submit" class="btn btn-primary" id="submit"name="load" value="hinagata">投稿</button>
 						</form>
 					</div>
 				</div>
@@ -80,7 +80,7 @@
             <!-- タイトル -->
             <div id="h_item3">
                 <div id="title">
-                    <p id="title-text">災害情報共有</p>
+					<p id="title-text">災害情報共有</p>
                 </div>
             </div>
             <!-- 検索バー -->
@@ -277,6 +277,13 @@
       var value = this.value;
       console.log(value);
     });
+    window.addEventListener("popstate", function (e) {
+
+    	 history.pushState(null, null, null);
+    	 return;
+
+    	});
+    	history.pushState(null, null, null);
 </script>
 </body>
 </html>

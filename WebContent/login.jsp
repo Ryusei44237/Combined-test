@@ -100,6 +100,13 @@
 		}else{
 			console.log("falseは確認されませんでした。");
 		}
+		window.addEventListener("popstate", function (e) {
+
+			 history.pushState(null, null, null);
+			 return;
+
+			});
+			history.pushState(null, null, null);
 	</script>
 </body>
 </html>

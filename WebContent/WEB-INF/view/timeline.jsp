@@ -46,16 +46,13 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<form id="postform" action="/Combined-test/PostServlet"
-						method="POST" enctype="multipart/form-data">
-						<class class="form-group"> <label for="exampleInputEmail1">投稿文</label>
-						<input type="text" class="form-control" id="testname"
-							name="PostContents" placeholder="投稿文を入力"> <input
-							type="hidden" name="accountid"
-							value=<%=request.getAttribute("accountid")%>> <input
-							type="hidden" name="accountname"
-							value=<%=request.getAttribute("getname")%>> <input
-							type="file" name="uploadFile" id="uploadFile" value="null">
+					<form id="postform" action="/Combined-test/PostServlet" method="POST" enctype="multipart/form-data">
+						<class class="form-group">
+							<label	for="exampleInputEmail1">投稿文</label>
+							<input type="text"	class="form-control" id="testname" name="PostContents" placeholder="投稿文を入力">
+							<input type="hidden" name="accountid" value=<%=request.getAttribute("accountid")%>>
+							<input type="hidden" name="accountname" value=<%=request.getAttribute("getname")%>>
+							<input type="file" name="uploadFile" id="uploadFile" value="null">
 						</class>
 						<div class="form-group col-md-4">
 							<select id="inputState" class="form-control" name="PostTags">
@@ -67,7 +64,7 @@
 							</select>
 						</div>
 						<input type="hidden" name="value" value="post">
-						<button type="submit" class="btn btn-primary" id="submit">投稿</button>
+						<button type="submit" class="btn btn-primary" id="submit" name="load" value="timeline">投稿</button>
 					</form>
 				</div>
 			</div>
@@ -375,6 +372,12 @@
 				for(int i = 0 ; i < list.size() ; i++){
 					post post = list.get(i);
 				%>
+				<script>
+					var path ="<%=post.getImg()%>";
+					if(path == ""){
+						document.getElementById("p1").style.display ="none";
+					};
+				</script>
 			<!-- 記事エリア -->
 			<div class="twitter__block">
 				<figure>
@@ -388,7 +391,7 @@
 					<div class="date"><%=post.getCreate_At() %></div>
 					<div class="text">
 						<%=post.getContents() %><br>
-						<img src="${pageContext.request.contextPath}/post-img/<%=post.getImg()%>" width="325" height="270"/>
+						<img id="post-img" src="${pageContext.request.contextPath}/post-img/<%=post.getImg()%>" width="325" height="270"/>
 					</div>
 				</div>
 			</div>
@@ -396,6 +399,13 @@
 		</div>
 		<!--　▲タイムラインエリア ここまで -->
 	</div>
+	<%
+
+	%>
+	<script>
+
+
+	</script>
 	<!--　▲twitter風ここまで -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -409,6 +419,15 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
 		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 		crossorigin="anonymous"></script>
+		<script>
+		window.addEventListener("popstate", function (e) {
+
+			 history.pushState(null, null, null);
+			 return;
+
+			});
+			history.pushState(null, null, null);
+		</script>
 	<!--ここまで-->
 </body>
 </html>

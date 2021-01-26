@@ -58,7 +58,7 @@
 											</select>
 										</div><!---->
 										<input type="hidden" name="value" value="post"><!---->
-										<button type="submit" class="btn btn-primary" id="submit">投稿</button>
+										<button type="submit" class="btn btn-primary" id="submit"name="load" value="mypage">投稿</button>
 									</form>
 								</div>
 							</div>
@@ -361,15 +361,15 @@
 												for(int i = 0 ; i < list.size() ; i++){ post post=list.get(i); %>
 													<tr>
 														<th scope="row" style="width: 100px;">1</th>
-														<td><img srgit c="${pageContext.request.contextPath}/user-img/<%=post.getUser_img()%>" alt="" class="rounded-circle"
+														<td><img src="${pageContext.request.contextPath}/user-img/<%=post.getUser_img()%>" alt="" class="rounded-circle"
 																style="margin-left: 0px; height: 30px; width: 30px;">
 															<%=post.getId() %>
 																<p class="text-justify">
 																	<%=post.getContents() %>
 																</p>
+																<img src="${pageContext.request.contextPath}/user-img/<%=post.getImg()%>" alt="">
 																<p id="hidden">
 																	<%=post.getAddress() %>
-																		<%=post.getImg()%>
 																			<%=post.getTags_Id()%>
 																				<%=post.getCreate_At() %>
 																</p>
@@ -425,7 +425,7 @@
 											<!--ここにその他-->
 											<!-- アカウント情報変更タブ -->
 											<form class="needs-validation" novalidate
-												action="/sotuken-project/UpdateServlet" method="get"
+												action="/Combined-test/UpdateServlet" method="get"
 												style="background-color:#f5f5f5;">
 												<div class="form-row">
 													<div class="col-md-5 mb-3">
@@ -539,7 +539,15 @@
 						integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 						crossorigin="anonymous"></script>
 					<!--ここまで-->
+	<script>
+	window.addEventListener("popstate", function (e) {
 
+		 history.pushState(null, null, null);
+		 return;
+
+		});
+		history.pushState(null, null, null);
+	</script>
 				</body>
 				<!-- body終了 -->
 
