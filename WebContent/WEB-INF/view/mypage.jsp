@@ -41,12 +41,12 @@
 										<class class="form-group">
 											<label for="exampleInputEmail1">投稿文</label>
 											<input type="text" class="form-control" id="testname" name="PostContents"
-												placeholder="投稿文を入力">
+												placeholder="投稿文を入力"><!---->
 											<input type="hidden" name="accountid"
-												value=<%=request.getAttribute("accountid")%>>
+												value=<%=request.getAttribute("accountid")%>><!---->
 											<input type="hidden" name="accountname"
-												value=<%=request.getAttribute("getname")%>>
-											<input type="file" name="uploadFile" id="uploadFile" value="null">
+												value=<%=request.getAttribute("getname")%>><!---->
+											<input type="file" name="uploadFile" id="uploadFile" value="null"><!---->
 										</class>
 										<div class="form-group col-md-4">
 											<select id="inputState" class="form-control" name="PostTags">
@@ -56,8 +56,8 @@
 												<option value="3">津波</option>
 												<option value="4">洪水</option>
 											</select>
-										</div>
-										<input type="hidden" name="value" value="post">
+										</div><!---->
+										<input type="hidden" name="value" value="post"><!---->
 										<button type="submit" class="btn btn-primary" id="submit">投稿</button>
 									</form>
 								</div>
