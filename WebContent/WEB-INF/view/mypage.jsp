@@ -370,7 +370,7 @@
 												for(int i = 0 ; i < list.size() ; i++){ post post=list.get(i); %>
 													<tr>
 														<th scope="row" style="width: 100px;">1</th>
-														<td><img srgit c="${pageContext.request.contextPath}/user-img/<%=post.getUser_img()%>" alt="" class="rounded-circle"
+														<td><img src="${pageContext.request.contextPath}/user-img/<%=post.getUser_img()%>" alt="" class="rounded-circle"
 																style="margin-left: 0px; height: 30px; width: 30px;">
 															<%=post.getId() %>
 																<p class="text-justify">
@@ -434,7 +434,7 @@
 											<!--ここにその他-->
 											<!-- アカウント情報変更タブ -->
 											<form class="needs-validation" novalidate
-												action="/sotuken-project/UpdateServlet" method="get"
+												action="/Combined-test/UpdateServlet" method="get"
 												style="background-color:#f5f5f5;">
 												<div class="form-row">
 													<div class="col-md-5 mb-3">
