@@ -21,6 +21,7 @@ public class PostSearch extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	public static ArrayList<post> Searchresult = new ArrayList<post>();
 	private String id;
+	private String name;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -37,10 +38,12 @@ public class PostSearch extends HttpServlet {
 		// TODO Auto-generated method stub
 		String SearchText=request.getParameter("Search");
 		id=request.getParameter("accountid");
+		name = request.getParameter("accountname");
 		System.out.println(SearchText);
 		Searchresult = PostDao.searchPost(SearchText);
 		System.out.println(PostDao.contents+"検索結果");
-		request.setAttribute("ID",id);
+		request.setAttribute("accountid",id);
+		request.setAttribute("getname",name);
 		request.setAttribute("list",Searchresult);
 		String view = "/WEB-INF/view/timeline.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);

@@ -20,6 +20,7 @@ import dao.PostDao;
 public class TimelineServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private String id;
+	private String name;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -39,6 +40,7 @@ public class TimelineServlet extends HttpServlet {
 		String tag=null;
 		tag=request.getParameter("tag");
 		id=request.getParameter("accountid");
+		name=request.getParameter("accountname");
 		switch(tag) {
 			case "台風":
 				tag="1";
@@ -59,7 +61,8 @@ public class TimelineServlet extends HttpServlet {
 		System.out.println(result);
 		//daoから受け取ったresultをtimelinejspにおくる
 		request.setAttribute("list", result);
-		request.setAttribute("ID",id);
+		request.setAttribute("accountid",id);
+		request.setAttribute("getname",name);
 		//timeline.jspへの遷移を書く
 		String view = "/WEB-INF/view/timeline.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
