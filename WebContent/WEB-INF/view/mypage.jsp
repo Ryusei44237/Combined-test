@@ -25,45 +25,44 @@
 
 
 					<!-- 投稿ボタンを押下した際に出てくる投稿モーダル -->
-					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-						aria-labelledby="exampleModalLabel" aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content" style="width: 750px;">
-								<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalLabel">投稿エリア</h5>
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body">
-									<form id="postform" action="/Combined-test/PostServlet" method="POST"
-										enctype="multipart/form-data">
-										<class class="form-group">
-											<label for="exampleInputEmail1">投稿文</label>
-											<input type="text" class="form-control" id="testname" name="PostContents"
-												placeholder="投稿文を入力"><!---->
-											<input type="hidden" name="accountid"
-												value=<%=request.getAttribute("accountid")%>><!---->
-											<input type="hidden" name="accountname"
-												value=<%=request.getAttribute("getname")%>><!---->
-											<input type="file" name="uploadFile" id="uploadFile" value="null"><!---->
-										</class>
-										<div class="form-group col-md-4">
-											<select id="inputState" class="form-control" name="PostTags">
-												<option selected>タグ選択</option>
-												<option value="1">台風</option>
-												<option value="2">地震</option>
-												<option value="3">津波</option>
-												<option value="4">洪水</option>
-											</select>
-										</div><!---->
-										<input type="hidden" name="value" value="post"><!---->
-										<button type="submit" class="btn btn-primary" id="submit"name="load" value="mypage">投稿</button>
-									</form>
-								</div>
-							</div>
-						</div>
+				 <div id="modal">
+       	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">投稿エリア</h5>
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
 					</div>
+					<div class="modal-body">
+						<form id="postform" action="/Combined-test/PostServlet" method="POST" enctype="multipart/form-data">
+							<class class="form-group">
+								<label	for="exampleInputEmail1">投稿文</label>
+								<input type="text"	class="form-control" id="testname" name="PostContents" placeholder="投稿文を入力">
+								<input type="hidden" name="accountid" value=<%=request.getAttribute("accountid")%>>
+								<input type="hidden" name="accountname" value=<%=request.getAttribute("getname")%>>
+								<input type="file" name="uploadFile" id="uploadFile" value="null">
+							</class>
+							<div class="form-group col-md-4">
+								<select id="inputState" class="form-control" name="PostTags">
+									<option selected>タグ選択</option>
+									<option value="1">台風</option>
+									<option value="2">地震</option>
+									<option value="3">津波</option>
+									<option value="4">洪水</option>
+								</select>
+							</div>
+							<input type="hidden" name="value" value="post">
+							<button type="submit" class="btn btn-primary" id="submit"name="load" value="hinagata">投稿</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 					<!-- 投稿モーダルここまで -->
 					<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog"
 						aria-labelledby="mySmallModalLabel" aria-hidden="true">
