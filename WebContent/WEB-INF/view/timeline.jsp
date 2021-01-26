@@ -321,11 +321,12 @@
 			<!-- 画面遷移 -->
             <div id="h_item2">
 				<div id="form_group">
-					<form action="/Combined-test/signup.jsp" method="get">
-						<button type="submit" class="clear-decoration">登録</button>
-					</form>
-					<form action="/Combined-test/login.jsp" method="get">
-						<button type="submit" class="clear-decoration">ログイン</button>
+					<form action="/Combined-test/Bridge" method="POST">
+						<button type="submit" class="clear-decoration">トップページ</button>
+						<input type="hidden" name="accountid"
+							value=<%=request.getAttribute("accountid")%>><!---->
+						<input type="hidden" name="accountname"
+							value=<%=request.getAttribute("getname")%>><!---->
 					</form>
 					<form action="/Combined-test/MyPageServlet" method="get">
 						<input type="hidden" name="account_id"

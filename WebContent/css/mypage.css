@@ -240,7 +240,7 @@ color: #ffffff;
     border: none;  /* 枠線を消す */
     outline: none; /* クリックしたときに表示される枠線を消す */
     background: transparent; /* 背景の灰色を消す */
-    width: 6vw;
+    width: fit-content;
 }
 #h_item3{
     display: flex;
