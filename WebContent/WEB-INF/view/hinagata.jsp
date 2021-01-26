@@ -271,12 +271,14 @@
       var value = this.value;
       console.log(value);
     });
+
     window.addEventListener("popstate", function (e) {
 
     	 history.pushState(null, null, null);
     	 return;
 
     	});
+
     	history.pushState(null, null, null);
 </script>
 </body>
