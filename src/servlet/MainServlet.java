@@ -60,7 +60,7 @@ public class MainServlet extends HttpServlet {
 //取得情報比較機能
 		login(name,hpass);
 //試行回数記録機能
-		// Judgment(count,name,pass);
+		 Judgment(count,name,hpass);
 		request.setAttribute("inputname",name);
 		request.setAttribute("inputpass",hpass);
 		request.setAttribute("getname",resname);
@@ -84,17 +84,17 @@ public class MainServlet extends HttpServlet {
 //			System.out.println("ユーザ名は一致：パスワードが不一致");
 			count+=1;
 //			System.out.println(count);
-			View = "/WEB-INF/view/login.jsp";
+			View = "login.jsp";
 		}else if(pass.equals(AccountDao.getpassword)) {
 //			System.out.println("パスワードは一致：ユーザ名が不一致");
 			count+=1;
 //			System.out.println(count);
-			View = "/WEB-INF/view/login.jsp";
+			View = "login.jsp";
 		}else {
 //			System.out.println("ユーザ名.パスワード両方不一致");
 			count+=1;
 //			System.out.println(count);
-			View = "/WEB-INF/view/login.jsp";
+			View = "login.jsp";
 		}
 	}
 	public static void Judgment(int count,String name,String pass) {
