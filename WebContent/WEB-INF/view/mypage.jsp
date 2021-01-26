@@ -291,8 +291,12 @@
 							<!-- 画面遷移 -->
 							<div id="h_item2">
 								<div id="form_group">
-									<form action="/Combined-test/MyPageServlet" method="get">
+									<form action="/Combined-test/Bridge" method="POST">
 										<button type="submit" class="clear-decoration">トップページへ</button>
+										<input type="hidden" name="accountid"
+												value=<%=request.getAttribute("accountid")%>><!---->
+											<input type="hidden" name="accountname"
+												value=<%=request.getAttribute("getname")%>><!---->
 									</form>
 								</div>
 							</div>
