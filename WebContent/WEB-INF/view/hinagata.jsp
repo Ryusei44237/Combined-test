@@ -121,14 +121,11 @@
                                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                             </ol>
                             <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <iframe src="https://www.youtube-nocookie.com/embed/WV5w19J-cAA? loop=1&playlist=vdxoDyNAoH0&autoplay=1&mute=1&rel=0&modestbranding=1"frameborder="0" allowfullscreen></iframe>
-                                </div>
                                 <div class="carousel-item">
                                     <iframe src="https://www.youtube-nocookie.com/embed/coYw-eVU0Ks? loop=1&playlist=vdxoDyNAoH0&autoplay=1&mute=1&rel=0&modestbranding=1"frameborder="0" allowfullscreen></iframe>
                                 </div>
                                 <div class="carousel-item">
-                                    <iframe src="https://www.youtube-nocookie.com/embed/WXoMJJCaQPU? loop=1&playlist=vdxoDyNAoH0&autoplay=1&mute=1&rel=0&modestbranding=1"frameborder="0" allowfullscreen></iframe>
+                                    <iframe src="https://www.youtube-nocookie.com/embed/gYzMwa1EdZM? loop=1&playlist=vdxoDyNAoH0&autoplay=1&mute=1&rel=0&modestbranding=1"frameborder="0" allowfullscreen></iframe>
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleIndicators"role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carouselExampleIndicators"role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span></a>
@@ -144,7 +141,7 @@
 					<div class="card-deck">
 						<div class="card">
 							<img
-								src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/app-img/東日本大震災.jpg"
+								src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/app-img/台風.jpg"
 								alt="" width="100%" height="200vh">
 							<div class="card-body">
 								<h5 class="card-title">台風</h5>
@@ -160,7 +157,7 @@
 							</div>
 						</div>
 						<div class="card">
-							<img src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/app-img/熊本地震.jpg"
+							<img src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/app-img/地震.jpg"
 								alt="" width="100%" height="200vh">
 							<div class="card-body">
 								<h5 class="card-title">東日本大震災</h5>
@@ -176,7 +173,7 @@
 							</div>
 						</div>
 						<div class="card">
-							<img src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/app-img/台風.jpg"
+							<img src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/app-img/津波.jpg"
 								alt="" width="100%" height="200vh">
 							<div class="card-body">
 								<h5 class="card-title">つなみ</h5>
@@ -197,7 +194,7 @@
 					<div class="card-deck">
 						<div class="card">
 							<img
-								src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/app-img/東日本大震災.jpg"
+								src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/app-img/洪水.jpg"
 								alt="" width="100%" height="200vh">
 							<div class="card-body">
 								<h5 class="card-title">洪水</h5>
