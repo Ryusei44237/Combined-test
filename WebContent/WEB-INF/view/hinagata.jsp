@@ -80,11 +80,7 @@
             <!-- タイトル -->
             <div id="h_item3">
                 <div id="title">
-                    <p id="title-text">
-						<form action="/Combined-test/login.jsp" method="get">
-						<button type="submit" class="clear-decoration">災害情報共有</button>
-						</form>
-					</p>
+					<p id="title-text">災害情報共有</p>
                 </div>
             </div>
             <!-- 検索バー -->
