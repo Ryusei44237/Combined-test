@@ -64,10 +64,8 @@
             <div id="h_item2">
 				<div id="form_group">
 					<form action="/Combined-test/MyPageServlet" method="get">
-						<input type="hidden" name="account_id"
-							value=<%=request.getAttribute("accountid")%>>
-						<button type="submit" class="clear-decoration" name="name"
-							value=<%=request.getAttribute("getname") %>>マイページ</button>
+						<input type="hidden" name="accountid"	value=<%=request.getAttribute("accountid")%>>
+						<button type="submit" class="clear-decoration" name="getname"	value=<%=request.getAttribute("getname") %>>マイページ</button>
 					</form>
 				</div>
 			</div>
@@ -157,6 +155,7 @@
 										value="タイムラインへgo">
 										<input type="hidden" name="account_id"
 							value=<%=request.getAttribute("accountid")%>>
+							<input type="hidden" name="accountname" value=<%=request.getAttribute("getname")%>>
 								</form>
 							</div>
 						</div>
@@ -172,6 +171,7 @@
 										value="タイムラインへgo">
 										<input type="hidden" name="account_id"
 							value=<%=request.getAttribute("accountid")%>>
+							<input type="hidden" name="accountname" value=<%=request.getAttribute("getname")%>>
 								</form>
 							</div>
 						</div>
@@ -187,6 +187,7 @@
 										value="タイムラインへgo">
 										<input type="hidden" name="account_id"
 							value=<%=request.getAttribute("accountid")%>>
+							<input type="hidden" name="accountname" value=<%=request.getAttribute("getname")%>>
 								</form>
 							</div>
 						</div>
@@ -207,37 +208,10 @@
 										value="タイムラインへgo">
 										<input type="hidden" name="account_id"
 							value=<%=request.getAttribute("accountid")%>>
+							<input type="hidden" name="accountname" value=<%=request.getAttribute("getname")%>>
 								</form>
 							</div>
 						</div>
-						<div class="card">
-							<img src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/app-img/熊本地震.jpg"
-								alt="" width="100%" height="200vh">
-							<div class="card-body">
-								<h5 class="card-title">熊本地震</h5>
-								<p class="card-text">大きな揺れが人々を襲った</p>
-								<form action="/Combined-test/TimelineServlet" method="get">
-									<input type="hidden" value="地震" name="tag"> <input
-										type="submit" class="btn btn-primary stretched-link"
-										value="タイムラインへgo">
-										<input type="hidden" name="account_id"
-							value=<%=request.getAttribute("accountid")%>>
-								</form>
-							</div>
-						</div>
-						<div class="card">
-							<img src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/app-img/台風.jpg"
-								alt="" width="100%" height="200vh">
-							<div class="card-body">
-								<h5 class="card-title">台風</h5>
-								<p class="card-text">太平洋側の地域に大きな被害をもたらした。</p>
-								<form action="/Combined-test/TimelineServlet" method="get">
-									<input type="hidden" value="台風" name="tag"> <input
-										type="submit" class="btn btn-primary stretched-link"
-										value="タイムラインへgo">
-										<input type="hidden" name="account_id"
-							value=<%=request.getAttribute("accountid")%>>
-								</form>
 							</div>
 						</div>
 					</div>
