@@ -46,16 +46,13 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<form id="postform" action="/Combined-test/PostServlet"
-						method="POST" enctype="multipart/form-data">
-						<class class="form-group"> <label for="exampleInputEmail1">投稿文</label>
-						<input type="text" class="form-control" id="testname"
-							name="PostContents" placeholder="投稿文を入力"> <input
-							type="hidden" name="accountid"
-							value=<%=request.getAttribute("accountid")%>> <input
-							type="hidden" name="accountname"
-							value=<%=request.getAttribute("getname")%>> <input
-							type="file" name="uploadFile" id="uploadFile" value="null">
+					<form id="postform" action="/Combined-test/PostServlet" method="POST" enctype="multipart/form-data">
+						<class class="form-group">
+							<label	for="exampleInputEmail1">投稿文</label>
+							<input type="text"	class="form-control" id="testname" name="PostContents" placeholder="投稿文を入力">
+							<input type="hidden" name="accountid" value=<%=request.getAttribute("accountid")%>>
+							<input type="hidden" name="accountname" value=<%=request.getAttribute("getname")%>>
+							<input type="file" name="uploadFile" id="uploadFile" value="null">
 						</class>
 						<div class="form-group col-md-4">
 							<select id="inputState" class="form-control" name="PostTags">
