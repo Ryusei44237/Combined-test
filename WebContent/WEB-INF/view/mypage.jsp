@@ -291,7 +291,7 @@
 							<div id="h_item2">
 								<div id="form_group">
 									<form action="/Combined-test/Bridge" method="POST">
-										<button type="submit" class="clear-decoration">トップページ</button>
+										<button type="submit" class="clear-decoration" style="width:fit-content;">トップページ</button>
 										<input type="hidden" name="accountid"
 												value=<%=request.getAttribute("id")%>><!---->
 											<input type="hidden" name="accountname"
