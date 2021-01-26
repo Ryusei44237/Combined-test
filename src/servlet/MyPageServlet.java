@@ -36,7 +36,8 @@ public static ArrayList<post> imagearray = new ArrayList<post>();
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		//メインjspからアカウントIDを取得し、アカウントIDをもとに行検索をかける。
-		id=request.getParameter("account_id");
+		id=request.getParameter("accountid");
+		System.out.println(id);
 //		投稿内容表示処理 (アカウントIDを取得し、アカウントIDが一致する投稿を全件取得する）
 		post(id);
 		request.setAttribute("list", list);

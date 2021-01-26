@@ -76,6 +76,8 @@ public class MainServlet extends HttpServlet {
 		account result = AccountDao.searchDao(name,pass);
 		System.out.println(result);
 		if (name.equals(AccountDao.getname)&&pass.equals(AccountDao.getpassword)) {
+			resid = AccountDao.getid;
+			resname = AccountDao.getname;
 			View = "/WEB-INF/view/hinagata.jsp";
 //			System.out.println("ログインフォームで　取得したユーザ名："+name+"  取得したパスワード："+pass);
 //			System.out.println("ユーザ名とパスワードが一致しました。");
