@@ -64,10 +64,8 @@
             <div id="h_item2">
 				<div id="form_group">
 					<form action="/Combined-test/MyPageServlet" method="get">
-						<input type="hidden" name="account_id"
-							value=<%=request.getAttribute("accountid")%>>
-						<button type="submit" class="clear-decoration" name="name"
-							value=<%=request.getAttribute("getname") %>>マイページ</button>
+						<input type="hidden" name="accountid"	value=<%=request.getAttribute("accountid")%>>
+						<button type="submit" class="clear-decoration" name="getname"	value=<%=request.getAttribute("getname") %>>マイページ</button>
 					</form>
 				</div>
 			</div>

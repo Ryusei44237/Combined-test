@@ -329,7 +329,7 @@
 							value=<%=request.getAttribute("getname")%>><!---->
 					</form>
 					<form action="/Combined-test/MyPageServlet" method="get">
-						<input type="hidden" name="account_id"
+						<input type="hidden" name="accountid"
 							value=<%=request.getAttribute("accountid")%>>
 						<button type="submit" class="clear-decoration" name="name"
 							value=<%=request.getAttribute("getname") %>>マイページ</button>

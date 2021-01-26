@@ -294,9 +294,9 @@
 									<form action="/Combined-test/Bridge" method="POST">
 										<button type="submit" class="clear-decoration">トップページ</button>
 										<input type="hidden" name="accountid"
-												value=<%=request.getAttribute("accountid")%>><!---->
+												value=<%=request.getAttribute("id")%>><!---->
 											<input type="hidden" name="accountname"
-												value=<%=request.getAttribute("getname")%>><!---->
+												value=<%=request.getAttribute("name")%>><!---->
 									</form>
 								</div>
 							</div>
