@@ -375,6 +375,12 @@
 				for(int i = 0 ; i < list.size() ; i++){
 					post post = list.get(i);
 				%>
+				<script>
+					var path ="<%=post.getImg()%>";
+					if(path == ""){
+						document.getElementById("p1").style.display ="none";
+					};
+				</script>
 			<!-- 記事エリア -->
 			<div class="twitter__block">
 				<figure>
@@ -388,7 +394,7 @@
 					<div class="date"><%=post.getCreate_At() %></div>
 					<div class="text">
 						<%=post.getContents() %><br>
-						<img src="${pageContext.request.contextPath}/post-img/<%=post.getImg()%>" width="325" height="270"/>
+						<img id="post-img" src="${pageContext.request.contextPath}/post-img/<%=post.getImg()%>" width="325" height="270"/>
 					</div>
 				</div>
 			</div>
@@ -396,6 +402,13 @@
 		</div>
 		<!--　▲タイムラインエリア ここまで -->
 	</div>
+	<%
+	
+	%>
+	<script>
+
+
+	</script>
 	<!--　▲twitter風ここまで -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

@@ -20,11 +20,8 @@ import util.GenerateHashedPw;
 @MultipartConfig(maxFileSize=50000000) // 1Mまで
 public class CreateAccountMethod extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	// String file_name="user-img";
-	// final File uploadDir = new File(file_name);
-	// public void init() throws ServletException{
-	// 	uploadDir.mkdir();
-	// }
+	private String html;
+
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
@@ -72,6 +69,7 @@ public class CreateAccountMethod extends HttpServlet {
 			System.out.println("画像なし");
 		}else {
 			part.write("/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/user-img/" + userimg);
+			html = "";
 		}
 
 		// part.write("C:\\Users\\SYS-4191163\\git\\Combined-test\\WebContent\\user-img\\" + userimg);
