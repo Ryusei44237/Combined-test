@@ -58,7 +58,7 @@
 											</select>
 										</div><!---->
 										<input type="hidden" name="value" value="post"><!---->
-										<button type="submit" class="btn btn-primary" id="submit">投稿</button>
+										<button type="submit" class="btn btn-primary" id="submit"name="load" value="mypage">投稿</button>
 									</form>
 								</div>
 							</div>
@@ -376,9 +376,9 @@
 																<p class="text-justify">
 																	<%=post.getContents() %>
 																</p>
+																<img src="${pageContext.request.contextPath}/user-img/<%=post.getImg()%>" alt="">
 																<p id="hidden">
 																	<%=post.getAddress() %>
-																		<%=post.getImg()%>
 																			<%=post.getTags_Id()%>
 																				<%=post.getCreate_At() %>
 																</p>
@@ -548,7 +548,15 @@
 						integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 						crossorigin="anonymous"></script>
 					<!--ここまで-->
+	<script>
+	window.addEventListener("popstate", function (e) {
 
+		 history.pushState(null, null, null);
+		 return;
+
+		});
+		history.pushState(null, null, null);
+	</script>
 				</body>
 				<!-- body終了 -->
 

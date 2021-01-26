@@ -27,6 +27,7 @@ public class PostServlet extends HttpServlet {
 	public static Part part;
 	private static String resname;
 	private static String resid;
+	private String Load;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -79,12 +80,18 @@ public class PostServlet extends HttpServlet {
 		post s = new post(id,account_name,PostContents,PostImg, PostTags_Id, PostAccount_Id, PostAddress, PostCreate_at);
 		System.out.println("投稿内容　"+PostContents+"投稿画像　"+PostImg+"ポストタグ　"+PostTags_Id+"投稿アカウントID　"+PostAccount_Id+"投稿場所　"+PostAddress+"作成日　"+PostCreate_at);
 		post result = PostDao.insertPost(s);
+		result=null;
 		resname=AccountDao.getname;
 		resid=AccountDao.getid;
 		request.setAttribute("getname",resname);
 		request.setAttribute("accountid", resid);
-		if (true) {
+		Load=request.getParameter("load");
+		if (Load.equals("hinagata")) {
 			String view ="/WEB-INF/view/hinagata.jsp";
+			RequestDispatcher dispatcher = request.getRequestDispatcher(view);
+			dispatcher.forward(request, response);
+		}else {
+			String view ="/WEB-INF/view/timeline.jsp";
 			RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 			dispatcher.forward(request, response);
 		}

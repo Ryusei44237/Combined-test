@@ -64,7 +64,7 @@
 							</select>
 						</div>
 						<input type="hidden" name="value" value="post">
-						<button type="submit" class="btn btn-primary" id="submit" value="timeline">投稿</button>
+						<button type="submit" class="btn btn-primary" id="submit" name="load" value="timeline">投稿</button>
 					</form>
 				</div>
 			</div>
@@ -400,7 +400,7 @@
 		<!--　▲タイムラインエリア ここまで -->
 	</div>
 	<%
-	
+
 	%>
 	<script>
 
@@ -419,6 +419,15 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
 		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 		crossorigin="anonymous"></script>
+		<script>
+		window.addEventListener("popstate", function (e) {
+
+			 history.pushState(null, null, null);
+			 return;
+
+			});
+			history.pushState(null, null, null);
+		</script>
 	<!--ここまで-->
 </body>
 </html>
