@@ -141,7 +141,7 @@
 					<div class="card-deck">
 						<div class="card">
 							<img
-								src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/app-img/台風.jpg"
+								src="${pageContext.request.contextPath}/appimage/台風.jpg"
 								alt="" width="100%" height="200vh">
 							<div class="card-body">
 								<h5 class="card-title">台風</h5>
@@ -157,7 +157,7 @@
 							</div>
 						</div>
 						<div class="card">
-							<img src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/app-img/地震.jpg"
+							<img src="${pageContext.request.contextPath}/appimage/地震.jpg"
 								alt="" width="100%" height="200vh">
 							<div class="card-body">
 								<h5 class="card-title">東日本大震災</h5>
@@ -173,7 +173,7 @@
 							</div>
 						</div>
 						<div class="card">
-							<img src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/app-img/津波.jpg"
+							<img src="${pageContext.request.contextPath}/appimage/津波.jpg"
 								alt="" width="100%" height="200vh">
 							<div class="card-body">
 								<h5 class="card-title">つなみ</h5>
