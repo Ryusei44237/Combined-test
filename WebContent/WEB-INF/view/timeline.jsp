@@ -345,7 +345,6 @@
 				</div>
 			</div>
 			<!-- 検索バー -->
-			<!-- 検索バー -->
             <div id="h_item4">
 				<div id="searchform">
 					<form class="form-inline my-2 my-lg-0"
@@ -384,7 +383,7 @@
 				<div class="twitter__block-text">
 					<div hidden><%=post.getId() %></div>
 					<div class="name"><%=post.getAccount_name() %><span
-							class="name_reply">@<%=post.getId() %></span>
+							class="name_reply">@<%=post.getId() %>></span>
 					</div>
 					<div class="date"><%=post.getCreate_At() %></div>
 					<div class="text">
