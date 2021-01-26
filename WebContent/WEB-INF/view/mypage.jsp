@@ -94,30 +94,8 @@
 												<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
 													aria-labelledby="v-pills-home-tab" style="width: 800px;">
 
-													<form method="post" action="example.cgi">
+													<p>Coming Soon...</p>
 
-														<p>
-															テーマ選択<br> <input type="radio" name="q1" value="ホワイト">
-															ホワイト <input type="radio" name="q1" value="ダーク"> ダーク
-														</p>
-
-														<p>
-															住所表示選択<br> <input type="radio" name="q2" value="はい">
-															表示 <input type="radio" name="q2" value="いいえ" checked>
-															非表示
-														</p>
-
-														<p>
-															電話番号表示選択<br> <input type="radio" name="q3" value="はい">
-															表示 <input type="radio" name="q3" value="いいえ" disabled>
-															非表示
-														</p>
-
-														<p>
-															<input type="submit" value="設定を保存する">
-														</p>
-
-													</form>
 												</div>
 												<div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
 													aria-labelledby="v-pills-profile-tab">
