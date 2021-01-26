@@ -75,11 +75,33 @@ public class MainServlet extends HttpServlet {
 	public static void login(String name,String pass) {
 		account result = AccountDao.searchDao(name,pass);
 		System.out.println(result);
-		if (name.equals(AccountDao.getname)&&hpass.equals(AccountDao.getpassword)) {
-			resname=AccountDao.getname;
-			resid=AccountDao.getid;
-			miss=null;
+		if (name.equals(AccountDao.getname)&&pass.equals(AccountDao.getpassword)) {
 			View = "/WEB-INF/view/hinagata.jsp";
+//			System.out.println("ログインフォームで　取得したユーザ名："+name+"  取得したパスワード："+pass);
+//			System.out.println("ユーザ名とパスワードが一致しました。");
+//			System.out.println("データベースから　取得したユーザ名：　"+AccountDao.getname+"  取得したパスワード：　"+AccountDao.getpassword+" 取得したID"+AccountDao.getid);
+		}else if (name.equals(AccountDao.getname)) {
+//			System.out.println("ユーザ名は一致：パスワードが不一致");
+			count+=1;
+//			System.out.println(count);
+			View = "/WEB-INF/view/login.jsp";
+		}else if(pass.equals(AccountDao.getpassword)) {
+//			System.out.println("パスワードは一致：ユーザ名が不一致");
+			count+=1;
+//			System.out.println(count);
+			View = "/WEB-INF/view/login.jsp";
+		}else {
+//			System.out.println("ユーザ名.パスワード両方不一致");
+			count+=1;
+//			System.out.println(count);
+			View = "/WEB-INF/view/login.jsp";
+		}
+	}
+	public static void Judgment(int count,String name,String pass) {
+		if (count<6) {
+			login(name, pass);
+		}else if (count>=6) {
+			View = "forgetpass.jsp";
 		}
 	}
 	public static String Hash(String salt,String password) {
