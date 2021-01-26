@@ -89,7 +89,7 @@
 													aria-selected="true" style="width: 155px;">ログアウト</a>
 											</div>
 										</div>
-										<div class="col-9">
+										<div class="col-9" style="max-width:68%;">
 											<div class="tab-content" id="v-pills-tabContent">
 												<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
 													aria-labelledby="v-pills-home-tab" style="width: 800px;">
