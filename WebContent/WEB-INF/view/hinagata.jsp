@@ -118,14 +118,13 @@
                             <ol class="carousel-indicators">
                                 <li data-target="#carouselExampleIndicators" data-slide-to="0"class="active"></li>
                                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                             </ol>
                             <div class="carousel-inner">
-                                <div class="carousel-item">
-                                    <iframe src="https://www.youtube-nocookie.com/embed/coYw-eVU0Ks? loop=1&playlist=vdxoDyNAoH0&autoplay=1&mute=1&rel=0&modestbranding=1"frameborder="0" allowfullscreen></iframe>
+                                <div class="carousel-item active">
+                                	<iframe src="https://www.youtube-nocookie.com/embed/BopNAWH3GCk? loop=1&playlist=vdxoDyNAoH0&autoplay=1&mute=1&rel=0&modestbranding=1"frameborder="0" allowfullscreen></iframe>
                                 </div>
                                 <div class="carousel-item">
-                                    <iframe src="https://www.youtube-nocookie.com/embed/gYzMwa1EdZM? loop=1&playlist=vdxoDyNAoH0&autoplay=1&mute=1&rel=0&modestbranding=1"frameborder="0" allowfullscreen></iframe>
+                                    <iframe src="https://www.youtube-nocookie.com/embed/coYw-eVU0Ks? loop=1&playlist=vdxoDyNAoH0&autoplay=1&mute=1&rel=0&modestbranding=1"frameborder="0" allowfullscreen></iframe>
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleIndicators"role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carouselExampleIndicators"role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span></a>
