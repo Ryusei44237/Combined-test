@@ -101,7 +101,7 @@
 								</select>
 							</div>
 							<input type="hidden" name="value" value="post">
-							<button type="submit" class="btn btn-primary" id="submit"name="load" value="hinagata">投稿</button>
+							<button type="submit" class="btn btn-primary" id="submit"name="load" value="timeline">投稿</button>
 						</form>
 					</div>
 				</div>
