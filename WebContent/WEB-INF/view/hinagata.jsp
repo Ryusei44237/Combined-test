@@ -194,7 +194,7 @@
 					<div class="card-deck">
 						<div class="card">
 							<img
-								src="/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/app-img/洪水.jpg"
+								src="${pageContext.request.contextPath}/appimage/洪水.jpg"
 								alt="" width="100%" height="200vh">
 							<div class="card-body">
 								<h5 class="card-title">洪水</h5>
