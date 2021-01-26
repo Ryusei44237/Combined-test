@@ -20,7 +20,7 @@ import dao.PostDao;
  * Servlet implementation class PostServlet
  */
 @WebServlet("/PostServlet")
-@MultipartConfig(maxFileSize=1048576) // 1Mまで
+@MultipartConfig(maxFileSize=5000000) // 1Mまで
 public class PostServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	public static String pathString;
@@ -64,8 +64,12 @@ public class PostServlet extends HttpServlet {
 //画像取得処理
 		String PostImg = util.Getimg.getFileName(part);
 		System.out.println(PostImg);
+		if (PostImg.equals("")) {
+			System.out.println("画像なし");
+		}else {
+			part.write("/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/post-img/" + PostImg);
+		}
 
-		part.write("/opt/tomcat/apache-tomcat-9.0.41/webapps/Combined-test/post-img/" + PostImg);
 //		part.write("C:\\Users\\SYS-4191163\\git\\Combined-test\\WebContent\\post-img\\" + part);
 //		part.write("C:\\Users\\Onuma Kento\\git\\Combined-test\\WebContent\\post-img\\" + part);
 //		part.write("C:\\Users\\SYS-4191153\\git\\Combined-test\\WebContent\\post-img\\" + part);
