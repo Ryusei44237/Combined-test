@@ -110,7 +110,7 @@ body{
 /* 本文 */
 .twitter__container .twitter__block-text .text {
   margin: 5px 0;
-  font-size:14px;
+  font-size:17px;
 }
 /* 画像を貼る場合 */
 .twitter__container .twitter__block-text .text .in-pict img {
