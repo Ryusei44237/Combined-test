@@ -370,9 +370,6 @@
 		<li class="nav-item"><a class="nav-link active blue"
 			id="home-tab" data-toggle="tab" href="#home" role="tab"
 			aria-controls="home" aria-selected="true">過去投稿</a></li>
-		<li class="nav-item"><a class="nav-link blue" id="profile-tab"
-			data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-			aria-selected="false">画像一覧</a></li>
 		<li class="nav-item"><a class="nav-link blue" id="contact-tab"
 			data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
 			aria-selected="false">アカウント管理</a></li>
@@ -407,27 +404,6 @@
 					<% } %>
 				</tbody>
 			</table>
-		</div>
-
-		<div class="tab-pane fade" id="profile" role="tabpanel"
-			aria-labelledby="profile-tab">
-			<div class="insta" style="background-color: #fcfcfc;">
-				<div>
-					<% ArrayList<post> list2 = (ArrayList<post>)request.getAttribute("list");
-														for(int i = 0 ; i < list2.size() ; i++){ post post=list2.get(i); %>
-					<a> <img
-						src="${pageContext.request.contextPath}/post-img/<%=post.getImg()%>"
-						class="img-circle"> <span class="fa-stack fa-lg"> <i
-							class="fa fa-circle fa-stack-2x"></i> <i
-							class="fa fa-times fa-stack-1x fa-inverse"></i>
-							<div hidden value=<%=post.getCreate_At() %>></div>
-							<div hidden value=<%=post.getImg()%>></div>
-					</span>
-					</a>
-					<%} %>
-				</div>
-			</div>
-
 		</div>
 		<div class="tab-pane fade" id="contact" role="tabpanel"
 			aria-labelledby="contact-tab">

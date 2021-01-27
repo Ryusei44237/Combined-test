@@ -16,7 +16,7 @@ public class PostDao {
 		//接続先DBのURL(jdbc:mysql://[ホスト名orIPアドレス]:[ポート番号]/[データベース名]?serverTimezone=JST)
 		private static final String url = "jdbc:mysql://localhost/application?serverTimezone=JST";
 		//ユーザ
-		private static final String user = "root";
+		private static final String user = "SNS";
 		//パスワード
 		private static final String pw = "admin";
 
