@@ -8,10 +8,10 @@
 <head>
 	<script>
 		window.addEventListener("popstate", function (e) {
-		
+
 		history.pushState(null, null, null);
 		return;
-		
+
 		});
 		history.pushState(null, null, null);
 		</script>
@@ -365,10 +365,6 @@
 							type="submit">Search</button>
 					</form>
 				</div>
-			<!-- 投稿ボタン -->
-			<button type="button" data-toggle="modal"
-				data-target="#exampleModal" class="btn btn-primary"
-				id="post_button">投稿</button>
 		</div>
 	</section>
 
