@@ -5,6 +5,7 @@ public class account {
 	private String name;
 	private String mail;
 	private String password;
+	private String password2;
 	private String birthday;
 	private String tell;
 	private String token;
@@ -70,6 +71,14 @@ public class account {
 
 	}
 
+	public account(String id, String name, String password2, String tell, String mail) {
+		// TODO 自動生成されたコンストラクター・スタブ
+		this.id=id;
+		this.name=name;
+		this.mail=mail;
+		this.password2=password2;
+		this.tell=tell;
+	}
 	public String getId() {
 		return id;
 	}
@@ -154,5 +163,11 @@ public class account {
 
 	public void setUserimg(String userimg) {
 		this.userimg = userimg;
+	}
+	public String getPassword2() {
+		return password2;
+	}
+	public void setPassword2(String password2) {
+		this.password2 = password2;
 	}
 }
