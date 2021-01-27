@@ -100,16 +100,14 @@
     </section>
     <div class="container_body">
 
-        <section class="left_menu">
 
-        </section>
 
         <!-- main area ここにカルーセル、card、その他 -->
-        <sction class="main">
+        <sction class="main" style="width:fit-content; margin-left: 132px;">
             <!-- カルーセル -->
             <div id="carousel-area">
                 <!-- カルーセルエリアを左、中央、右に三等分する -->
-                <div id="carousel_left_side">
+                <div id="carousel_left_side"style="width: 20vw;">
 
                 </div>
                 <div id="carousel_center_side">
@@ -187,10 +185,6 @@
 								</form>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div id="card">
-					<div class="card-deck">
 						<div class="card">
 							<img
 								src="${pageContext.request.contextPath}/appimage/洪水.jpg"
@@ -210,15 +204,10 @@
 						</div>
 							</div>
 						</div>
-					</div>
-				</div>
         </sction>
         <!-- main area end -->
 
-        <sction class="right_menu">
 
-        </sction>
-    </div>
     </div>
     <section class="footer">
             rights.ryusei

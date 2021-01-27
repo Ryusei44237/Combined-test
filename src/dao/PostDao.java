@@ -355,7 +355,7 @@ public class PostDao {
 						con = DriverManager.getConnection(url, user, pw);
 
 						//SQL文の元を作成する
-						String sql = "SELECT img FROM post where account_id = ?;";
+						String sql = "SELECT img FROM post where account_id = ? order by post.create_at desc;";
 
 						//SQLを実行するための準備(構文解析)
 						pstmt = con.prepareStatement(sql);
