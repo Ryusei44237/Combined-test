@@ -7,6 +7,15 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+	<script>
+		window.addEventListener("popstate", function (e) {
+		
+		history.pushState(null, null, null);
+		return;
+		
+		});
+		history.pushState(null, null, null);
+		</script>
 <!-- 確認 -->
 <meta charset="utf-8">
 <link rel="stylesheet"

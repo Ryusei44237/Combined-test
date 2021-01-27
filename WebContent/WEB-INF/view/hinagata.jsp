@@ -4,6 +4,15 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+	<script>
+		window.addEventListener("popstate", function (e) {
+		
+		history.pushState(null, null, null);
+		return;
+		
+		});
+		history.pushState(null, null, null);
+		</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/hinagata.css">

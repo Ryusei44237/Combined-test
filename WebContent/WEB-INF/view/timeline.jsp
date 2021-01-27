@@ -6,6 +6,15 @@
 <!DOCTYPE html>
 <html lang="ja" class="no-js">
 <head>
+	<script>
+		window.addEventListener("popstate", function (e) {
+		
+		history.pushState(null, null, null);
+		return;
+		
+		});
+		history.pushState(null, null, null);
+		</script>
 <!-- 確認 -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -4,7 +4,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+window.addEventListener("popstate", function (e) {
 
+history.pushState(null, null, null);
+return;
+
+});
+history.pushState(null, null, null);
+</script>
 <!--これでいける-->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -100,13 +108,6 @@
 		}else{
 			console.log("falseは確認されませんでした。");
 		}
-		window.addEventListener("popstate", function (e) {
-
-			 history.pushState(null, null, null);
-			 return;
-
-			});
-			history.pushState(null, null, null);
 	</script>
 </body>
 </html>
