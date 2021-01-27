@@ -359,9 +359,9 @@
 			<h1><%=request.getAttribute("name")%></h1>
 			<!-- <button class="followbutton">フォロー</button> -->
 		</div>
-		<div class="bg-white rounded">
+		<!-- <div class="bg-white rounded">
 			<p class="text-justify" style="background: #fcfcfc">こんにちは！</p>
-		</div>
+		</div> -->
 	</div>
 	<!-- end -->
 
@@ -390,14 +390,13 @@
 							style="margin-left: 0px; height: 30px; width: 30px;"> <%=post.getId() %>
 							<p class="text-justify">
 								<%=post.getContents() %>
-							</p> <img
-							src="${pageContext.request.contextPath}/user-img/<%=post.getImg()%>"
-							alt="">
-							<p id="hidden">
+							</p> <img	src="${pageContext.request.contextPath}/post-img/<%=post.getImg()%>"alt="">
+							<div id="hidden">
 								<%=post.getAddress() %>
 								<%=post.getTags_Id()%>
-								<%=post.getCreate_At() %>
-							</p></td>
+							</div>
+							<p><%=post.getCreate_At() %></p>
+						</td>
 
 
 					</tr>

@@ -103,7 +103,7 @@ public class MainServlet extends HttpServlet {
 		if (count<6) {
 			login(name, pass);
 		}else if (count>=6) {
-			View = "forgetpass.jsp";
+			
 		}
 	}
 	public static String Hash(String salt,String password) {
