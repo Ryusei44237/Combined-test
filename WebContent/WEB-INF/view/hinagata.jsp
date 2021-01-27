@@ -129,11 +129,11 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
 									<!-- <img src="${pageContext.request.contextPath}/appimage/地震.jpg"	alt="" > -->
-                                	<iframe src="https://www.youtube-nocookie.com/embed/BopNAWH3GCk? loop=1&playlist=vdxoDyNAoH0&autoplay=1&mute=1&rel=0&modestbranding=1"frameborder="0" allowfullscreen></iframe>
+                                	<iframe src="https://www.youtube-nocookie.com/embed/BopNAWH3GCk? loop=1&autoplay=1&mute=1&rel=0&modestbranding=1"frameborder="0" allowfullscreen></iframe>
                                 </div>
                                 <div class="carousel-item">
 									<!-- <img src="${pageContext.request.contextPath}/appimage/台風.jpg"alt=""> -->
-                                    <iframe src="https://www.youtube-nocookie.com/embed/coYw-eVU0Ks? loop=1&playlist=vdxoDyNAoH0&autoplay=1&mute=1&rel=0&modestbranding=1"frameborder="0" allowfullscreen></iframe>
+                                    <iframe src="https://www.youtube-nocookie.com/embed/coYw-eVU0Ks? loop=1&autoplay=1&mute=1&rel=0&modestbranding=1"frameborder="0" allowfullscreen></iframe>
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleIndicators"role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carouselExampleIndicators"role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span></a>

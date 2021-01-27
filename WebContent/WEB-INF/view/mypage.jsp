@@ -273,7 +273,7 @@
 									<div class="tab-body">
 										<div>
 											<p>ログアウトしますか？</p>
-											<a class="btn btn-primary" href="login.html" role="button">ログアウト</a>
+											<a class="btn btn-primary" href="logout.jsp" role="button">ログアウト</a>
 										</div>
 									</div>
 									<!--ここでログアウト-->
@@ -356,7 +356,7 @@
 	<!-- プロフィール -->
 	<div class="profile">
 		<div class="username">
-			<h1>ユーザ名を入力</h1>
+			<h1><%=request.getAttribute("name")%></h1>
 			<!-- <button class="followbutton">フォロー</button> -->
 		</div>
 		<div class="bg-white rounded">
