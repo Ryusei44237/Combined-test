@@ -428,19 +428,19 @@
 			<!--ここにその他-->
 			<!-- アカウント情報変更タブ -->
 			<form class="needs-validation" novalidate
-				action="/Combined-test/UpdateServlet" method="get"
+				action="/Combined-test/Update" method="POST"
 				style="background-color: #f5f5f5;">
 				<div class="form-row">
 					<div class="col-md-5 mb-3">
 						<label for="validationCustom01">ユーザID</label> <input type="text"
 							class="form-control" id="validationCustom01"
-							value=<%=request.getAttribute("id")%> name="userid" required>
+							value=<%=request.getAttribute("id")%> name="id" required>
 						<div class="valid-feedback"></div>
 					</div>
 					<div class="col-md-5 mb-3">
 						<label for="validationCustom02">名前</label> <input type="text"
 							class="form-control" id="validationCustom02"
-							value=<%=request.getAttribute("name")%> name="lastname" required>
+							value=<%=request.getAttribute("name")%> name="name" required>
 						<div class="valid-feedback"></div>
 					</div>
 				</div>
@@ -455,7 +455,7 @@
 						<label for="validationCustom06">メール</label> <input type="text"
 							class="form-control" id="validationCustom06"
 							value=<%=request.getAttribute("mail")%>
-							aria-describedby="inputGroupPrepend" name="userId" required>
+							aria-describedby="inputGroupPrepend" name="mail" required>
 						<div class="invalid-feedback"></div>
 					</div>
 				</div>
@@ -463,13 +463,12 @@
 					<div class="col-md-5 mb-3">
 						<label for="validationCustom04">現在のパスワード</label> <input
 							type="password" class="form-control" id="validationCustom04"
-							placeholder="パスワード" name="password" required>
+							placeholder="パスワード" name="password" required value=<%=request.getAttribute("password")%>>
 						<div class="invalid-feedback"></div>
 					</div>
 					<div class="col-md-5 mb-3">
-						<label for="validationCustom05">新しいパスワード</label> <input
-							type="password" class="form-control" id="validationCustom05"
-							placeholder="パスワードの再入力をお願いします" name="password2" required>
+						<label for="validationCustom05">新しいパスワード</label>
+						<input	type="password" class="form-control" id="validationCustom05"placeholder="パスワードの再入力をお願いします" name="password2" required>
 						<div class="invalid-feedback"></div>
 					</div>
 				</div>

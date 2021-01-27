@@ -43,6 +43,7 @@ public static ArrayList<post> imagearray = new ArrayList<post>();
 		request.setAttribute("list", list);
 //		登録情報更新処理 （アカウントIDで照会し、一致するアカウント登録情報を取得）
 		account(id);
+//		image(id);
 		System.out.println("main.jspから　取得した名前　"+AccountDao.getname);
 		request.setAttribute("id",AccountDao.getid);
 		request.setAttribute("name",AccountDao.getname);
@@ -88,10 +89,10 @@ public static ArrayList<post> imagearray = new ArrayList<post>();
 		//ArrayListを作ってListの中に全件検索のdaoのメソッドで得た値を代入する
 				list = PostDao.allPost(id);
 	}
-	public static ArrayList<Bean.post> image(String id) {
-		imagearray = PostDao.image(id);
-		return imagearray;
-	}
+//	public static ArrayList<Bean.post> image(String id) {
+//		imagearray = PostDao.image(id);
+//		return imagearray;
+//	}
 	public static int FollowCount(int userId){
 		int followcount = a.getFollowCount(Integer.parseInt(id));
 		return followcount;
