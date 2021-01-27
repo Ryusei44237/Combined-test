@@ -357,9 +357,6 @@
 					</form>
 				</div>
 			<!-- 投稿ボタン -->
-			<button type="button" data-toggle="modal"
-				data-target="#exampleModal" class="btn btn-primary"
-				id="post_button">投稿</button>
 		</div>
 	</section>
 
