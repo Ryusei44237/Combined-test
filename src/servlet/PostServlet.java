@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -28,6 +29,12 @@ public class PostServlet extends HttpServlet {
 	private static String resname;
 	private static String resid;
 	private String Load;
+	private String judge;
+	private String tag;
+	private String SearchText;
+	private String tagnum;
+	public static ArrayList<post> result2 = new ArrayList<post>();
+	public static ArrayList<post> Searchresult = new ArrayList<post>();
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -56,6 +63,7 @@ public class PostServlet extends HttpServlet {
 		String PostTags_Id = request.getParameter("PostTags");
 		String PostAccount_Id = request.getParameter("accountid");
 		String id = null;
+
 		account(PostAccount_Id);
 		String key="時間を取得します";//GetTimeメソッドへのキー
 		String PostCreate_at = util.GetTime.GetTime(key);//作成日
@@ -85,20 +93,30 @@ public class PostServlet extends HttpServlet {
 		resid=AccountDao.getid;
 		request.setAttribute("getname",resname);
 		request.setAttribute("accountid", resid);
-		Load=request.getParameter("load");
-		if (Load.equals("hinagata")) {
+		request.setAttribute("list", result2);
+		request.setAttribute("tag", tagnum);
+//		Load=request.getParameter("load");
+//		if (Load.equals("hinagata")) {
 			String view ="/WEB-INF/view/hinagata.jsp";
 			RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 			dispatcher.forward(request, response);
-		}else if(Load.equals("timeline")){
-			String view ="/WEB-INF/view/timeline.jsp";
-			RequestDispatcher dispatcher = request.getRequestDispatcher(view);
-			dispatcher.forward(request, response);
-		}else if(Load.equals("mypage")) {
-			String view ="/WEB-INF/view/mypage.jsp";
-			RequestDispatcher dispatcher = request.getRequestDispatcher(view);
-			dispatcher.forward(request, response);
-		}
+//		}else if(Load.equals("timeline")){
+//			if (judge.equals("tag")) {
+//				result2 = PostDao.tags_post(tag);
+//				System.out.println("タグ遷移");
+//				String view = "timeline.jsp";
+//				response.sendRedirect(view);
+//			}else if(judge.equals("search")) {
+//				Searchresult = PostDao.searchPost(SearchText);
+//				System.out.println("テキスト遷移");
+//				String view = "timeline.jsp";
+//				response.sendRedirect(view);
+//			}
+//		}else if(Load.equals("mypage")) {
+//			String view ="/WEB-INF/view/mypage.jsp";
+//			RequestDispatcher dispatcher = request.getRequestDispatcher(view);
+//			dispatcher.forward(request, response);
+//		}
 
 	}
 	public static void account(String id) {

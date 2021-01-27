@@ -63,6 +63,9 @@ public class TimelineServlet extends HttpServlet {
 		request.setAttribute("list", result);
 		request.setAttribute("accountid",id);
 		request.setAttribute("getname",name);
+		request.setAttribute("tag",tag);
+		request.setAttribute("if","tag");
+		request.setAttribute("searchtext",null);
 		//timeline.jspへの遷移を書く
 		String view = "/WEB-INF/view/timeline.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);

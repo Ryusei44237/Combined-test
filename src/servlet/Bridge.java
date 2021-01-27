@@ -38,8 +38,9 @@ public class Bridge extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
 		id = request.getParameter("accountid");
-		name = request.getParameter("accountname");
+		name=request.getParameter("accountname");
 		System.out.println("ブリッジ"+id+name);
 		request.setAttribute("getname",name);
 		request.setAttribute("accountid", id);

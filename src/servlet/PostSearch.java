@@ -45,6 +45,8 @@ public class PostSearch extends HttpServlet {
 		request.setAttribute("accountid",id);
 		request.setAttribute("getname",name);
 		request.setAttribute("list",Searchresult);
+		request.setAttribute("if","search");
+		request.setAttribute("searchtext",SearchText);
 		String view = "/WEB-INF/view/timeline.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 		dispatcher.forward(request, response);
