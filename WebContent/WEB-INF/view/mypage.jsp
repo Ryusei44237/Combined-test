@@ -390,7 +390,7 @@
 							style="margin-left: 0px; height: 30px; width: 30px;"> <%=post.getId() %>
 							<p class="text-justify">
 								<%=post.getContents() %>
-							</p> <img	src="${pageContext.request.contextPath}/post-img/<%=post.getImg()%>"alt="">
+							</p> <img	src="${pageContext.request.contextPath}/post-img/<%=post.getImg()%>"alt="" width="325" height="270">
 							<div id="hidden">
 								<%=post.getAddress() %>
 								<%=post.getTags_Id()%>
